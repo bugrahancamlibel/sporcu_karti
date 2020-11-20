@@ -61,6 +61,14 @@ public class Basketbolcu extends Sporcu {
         this.ucluk = ucluk;
         this.serbestAtis = serbestAtis;
     }
+
+    @Override
+    public void sporcuPuaniGoster() {
+        super.sporcuPuaniGoster();
+        System.out.println("Basketcinin adi:"+basketbolcuAdi+" Basketcinin takimi:"+basketbolcuTakim);
+        System.out.println("ikiliği:"+ikilik+" ucluk:"+ucluk+" serbesti atisi:"+serbestAtis);
+    }
+
     //projede bizden istenilen parametresiz constructor.(ne ise yaradigini henuz bilmiyorum)
     public Basketbolcu(){
         System.out.println("Parametresiz constructor");

@@ -80,4 +80,10 @@ public class Futbolcu extends Sporcu {
         System.out.println("Parametresiz constructor");
     }
 
+    @Override
+    public void sporcuPuaniGoster() {
+        super.sporcuPuaniGoster();
+        System.out.println("OVERRIDE OLDU MU?\nFutbolcunun adi: "+futbolcuAdi+" Futbolcunun takimi: "+futbolcuTakim);
+        System.out.println("futbolcunun penaltisi:"+penalti+" futbolcunun serbest atisi:"+serbestAtis+" kaleciyle karsi karsiya:"+kaleciKarsiKarsiya);
+    }
 }

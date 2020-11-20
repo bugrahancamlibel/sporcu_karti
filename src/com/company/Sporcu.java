@@ -9,6 +9,10 @@ public class Sporcu {
 
         return sporcuIsim;
     }
+    public void sporcuPuaniGoster(){
+        System.out.println("\nsporcu klasından gelen sout");
+
+    }
 
     public void setSporcuIsim(String sporcuIsim) {
 
