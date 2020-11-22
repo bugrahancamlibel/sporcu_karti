@@ -9,27 +9,27 @@ public class Main {
     public static void main(String[] args) {
 
 
-        ArrayList<Futbolcu> futbolcuList = new ArrayList<Futbolcu>();
+        ArrayList<Sporcu> futbolcuList = new ArrayList<Sporcu>();
         // Futbolcu kartlari.
-        Futbolcu futbolcu1 = new Futbolcu("MESSI","BARCELONA",95,90,99);
-        Futbolcu futbolcu2 = new Futbolcu("RONALDO","JUVENTUS",95,90,99);
-        Futbolcu futbolcu3 = new Futbolcu("DE BRUYNE","MANCHESTER CITY",85,95,85);
-        Futbolcu futbolcu4  = new Futbolcu("NEYMAR","PSG",96,90,90);
-        Futbolcu futbolcu5 = new Futbolcu("IBRAHIMOVIC","MILAN AC",85,80,85);
-        Futbolcu futbolcu6 = new Futbolcu("E.HAALAND","BORUSSIA DORTMUND",94,75,95);
-        Futbolcu futbolcu7 = new Futbolcu("LEWANDOWSKI","BAYERN MUNCHEN",95,80,98);
-        Futbolcu futbolcu8 = new Futbolcu("MBAPPE","PSG",95,85,97);
+        Futbolcu messi = new Futbolcu("Messi","Barcelona",95,90,99);
+        Futbolcu ronaldo = new Futbolcu("Ronaldo","Juventus",95,90,99);
+        Futbolcu de_bruyne = new Futbolcu("De Bruyne","Manchester Cıty",85,95,85);
+        Futbolcu neymar  = new Futbolcu("Neymar","Psg",96,90,90);
+        Futbolcu ibrahimovic = new Futbolcu("Ibrahimovic","Milan Ac",85,80,85);
+        Futbolcu e_haaland = new Futbolcu("E.Haaland","Borussia Dortmund",94,75,95);
+        Futbolcu lewandowski = new Futbolcu("Lewandowski","Bayern Munchen",95,80,98);
+        Futbolcu mbappe = new Futbolcu("Mbappe","Psg",95,85,97);
 
-        futbolcuList.add(futbolcu1);
-        futbolcuList.add(futbolcu2);
-        futbolcuList.add(futbolcu3);
-        futbolcuList.add(futbolcu4);
-        futbolcuList.add(futbolcu5);
-        futbolcuList.add(futbolcu6);
-        futbolcuList.add(futbolcu7);
-        futbolcuList.add(futbolcu8);
+        futbolcuList.add(messi);
+        futbolcuList.add(ronaldo);
+        futbolcuList.add(de_bruyne);
+        futbolcuList.add(neymar);
+        futbolcuList.add(ibrahimovic);
+        futbolcuList.add(e_haaland);
+        futbolcuList.add(lewandowski);
+        futbolcuList.add(mbappe);
 
-        System.out.println(futbolcuList.get(1).getFutbolcuAdi());
+        System.out.println(futbolcuList.get(1).getSporcuIsim());
 
         // Objeleri arrayList e atama başarılı. bunu sout la görmüs olduk
         /*for (Futbolcu a_futbolcu: futbolcuList) {
@@ -44,19 +44,30 @@ public class Main {
 
         Random random = new Random();
 
-        ArrayList<Oyuncu> oyuncus = new ArrayList<Oyuncu>();
-        ArrayList<Bilgisayar> pc = new ArrayList<Bilgisayar>();
+
+        ArrayList<Sporcu> basketbolcuList = new ArrayList<Sporcu>();
 
        //Basketbolcu kartlari.
-        /*Basketbolcu basketbolcu1 = new Basketbolcu();
-        Basketbolcu basketbolcu2 = new Basketbolcu();
-        Basketbolcu basketbolcu3 = new Basketbolcu();
-        Basketbolcu basketbolcu4 = new Basketbolcu();
-        Basketbolcu basketbolcu5 = new Basketbolcu();
-        Basketbolcu basketbolcu6 = new Basketbolcu();
-        Basketbolcu basketbolcu7 = new Basketbolcu();
-        Basketbolcu basketbolcu8 = new Basketbolcu();
-        */
+        Basketbolcu lebronjames = new Basketbolcu("Lebron James"," Los Angeles Lakers",89,84,70);
+        Basketbolcu giannisantetokounmpo = new Basketbolcu("Giannis Antetokounmpo"," Milwaukee Bucks",89,84,70);
+        Basketbolcu kawhileonard = new Basketbolcu("Kawhi Leonard"," Los Angeles Clippers",79,92,89);
+        Basketbolcu jamesharden = new Basketbolcu("James Harden","Houston Rockets",79,91,86);
+        Basketbolcu anthonydavis = new Basketbolcu("Anthony Davis","Los Angeles Lakers",90,87,85);
+        Basketbolcu kevindurant = new Basketbolcu("Kevin Durant","Brooklyn Nets",80,94,89);
+        Basketbolcu damianlillard = new Basketbolcu("Damian Lillard"," Portland Trail Blazers",63,92,89);
+        Basketbolcu stephencurry = new Basketbolcu("Stephen Curry","Golden State Warriors",58,95,92);
+
+        basketbolcuList.add(lebronjames);
+        basketbolcuList.add(giannisantetokounmpo);
+        basketbolcuList.add(kawhileonard);
+        basketbolcuList.add(jamesharden);
+        basketbolcuList.add(anthonydavis);
+        basketbolcuList.add(kevindurant);
+        basketbolcuList.add(damianlillard);
+        basketbolcuList.add(stephencurry);
+
+        System.out.println(basketbolcuList.get(3).getSporcuIsim());
+
 
     }
 }
