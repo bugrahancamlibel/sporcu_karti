@@ -83,7 +83,12 @@ public class Futbolcu extends Sporcu {
     @Override
     public void sporcuPuaniGoster() {
         super.sporcuPuaniGoster();
-        System.out.println("OVERRIDE OLDU MU?\nFutbolcunun adi: "+futbolcuAdi+" Futbolcunun takimi: "+futbolcuTakim);
-        System.out.println("futbolcunun penaltisi:"+penalti+" futbolcunun serbest atisi:"+serbestAtis+" kaleciyle karsi karsiya:"+kaleciKarsiKarsiya);
+        System.out.println("Futbolcunun penaltisi : "+penalti);
+        System.out.println("Futbolcunun serbest arisi : "+serbestAtis);
+        System.out.println("Futbolcunun kaleciyle karsi karsiyasi : " + kaleciKarsiKarsiya);
     }
+    /*public String toString(){
+
+        return "isim : " +futbolcuAdi+" takim : "+futbolcuTakim +" penalti : "+penalti +" serbest atis : " +serbestAtis+" kaleci karsi karsiya : " +kaleciKarsiKarsiya;
+    }*/
 }

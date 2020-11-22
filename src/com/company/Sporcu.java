@@ -9,10 +9,7 @@ public class Sporcu {
 
         return sporcuIsim;
     }
-    public void sporcuPuaniGoster(){
-        System.out.println("\nsporcu klasından gelen sout");
 
-    }
 
     public void setSporcuIsim(String sporcuIsim) {
 
@@ -29,6 +26,11 @@ public class Sporcu {
         this.sporcuTakim = sporcuTakim;
     }
     //getter setter son.
+
+    public void sporcuPuaniGoster(){
+
+
+    }
 
     //Constructor
     public Sporcu(String sporcuIsim, String sporcuTakim) {

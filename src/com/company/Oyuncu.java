@@ -35,4 +35,10 @@ public class Oyuncu {
         this.oyuncuAdi = oyuncuAdi;
         this.skor = skor;
     }
+
+    public  void kartSec(){
+        //Add aSystem.out.println("Swingle birlikte bağlantı kuracağımız, oyun oynarken kartı seçtiren fonk.");
+
+
+    }
 }
