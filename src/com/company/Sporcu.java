@@ -29,7 +29,6 @@ public class Sporcu {
 
     public void sporcuPuaniGoster(){
 
-
     }
 
     //Constructor

@@ -9,45 +9,27 @@ public class Main {
     public static void main(String[] args) {
 
 
-        ArrayList<Sporcu> futbolcuList = new ArrayList<Sporcu>();
-        // Futbolcu kartlari.
-        Futbolcu messi = new Futbolcu("Messi","Barcelona",95,90,99);
-        Futbolcu ronaldo = new Futbolcu("Ronaldo","Juventus",95,90,99);
-        Futbolcu de_bruyne = new Futbolcu("De Bruyne","Manchester Cıty",85,95,85);
-        Futbolcu neymar  = new Futbolcu("Neymar","Psg",96,90,90);
-        Futbolcu ibrahimovic = new Futbolcu("Ibrahimovic","Milan Ac",85,80,85);
-        Futbolcu e_haaland = new Futbolcu("E.Haaland","Borussia Dortmund",94,75,95);
-        Futbolcu lewandowski = new Futbolcu("Lewandowski","Bayern Munchen",95,80,98);
-        Futbolcu mbappe = new Futbolcu("Mbappe","Psg",95,85,97);
-
-        futbolcuList.add(messi);
-        futbolcuList.add(ronaldo);
-        futbolcuList.add(de_bruyne);
-        futbolcuList.add(neymar);
-        futbolcuList.add(ibrahimovic);
-        futbolcuList.add(e_haaland);
-        futbolcuList.add(lewandowski);
-        futbolcuList.add(mbappe);
-
-        System.out.println(futbolcuList.get(1).getSporcuIsim());
-
-        // Objeleri arrayList e atama başarılı. bunu sout la görmüs olduk
-        /*for (Futbolcu a_futbolcu: futbolcuList) {
-
-            System.out.println(a_futbolcu.toString());
-        }*/
-
-        int secim_1;
-        int secim_2;
-
-        Scanner scanner = new Scanner(System.in);
-
-        Random random = new Random();
-
-
+        ArrayList<Futbolcu> futbolcuList = new ArrayList<Futbolcu>();
         ArrayList<Sporcu> basketbolcuList = new ArrayList<Sporcu>();
+        // Futbolcu kartlari.
+        Futbolcu futbolcu1 = new Futbolcu("MESSI","BARCELONA",95,90,99);
+        Futbolcu futbolcu2 = new Futbolcu("RONALDO","JUVENTUS",95,90,99);
+        Futbolcu futbolcu3 = new Futbolcu("DE BRUYNE","MANCHESTER CITY",85,95,85);
+        Futbolcu futbolcu4  = new Futbolcu("NEYMAR","PSG",96,90,90);
+        Futbolcu futbolcu5 = new Futbolcu("IBRAHIMOVIC","MILAN AC",85,80,85);
+        Futbolcu futbolcu6 = new Futbolcu("E.HAALAND","BORUSSIA DORTMUND",94,75,95);
+        Futbolcu futbolcu7 = new Futbolcu("LEWANDOWSKI","BAYERN MUNCHEN",95,80,98);
+        Futbolcu futbolcu8 = new Futbolcu("MBAPPE","PSG",95,85,97);
 
-       //Basketbolcu kartlari.
+        futbolcuList.add(futbolcu1);
+        futbolcuList.add(futbolcu2);
+        futbolcuList.add(futbolcu3);
+        futbolcuList.add(futbolcu4);
+        futbolcuList.add(futbolcu5);
+        futbolcuList.add(futbolcu6);
+        futbolcuList.add(futbolcu7);
+        futbolcuList.add(futbolcu8);
+
         Basketbolcu lebronjames = new Basketbolcu("Lebron James"," Los Angeles Lakers",89,84,70);
         Basketbolcu giannisantetokounmpo = new Basketbolcu("Giannis Antetokounmpo"," Milwaukee Bucks",89,84,70);
         Basketbolcu kawhileonard = new Basketbolcu("Kawhi Leonard"," Los Angeles Clippers",79,92,89);
@@ -66,8 +48,72 @@ public class Main {
         basketbolcuList.add(damianlillard);
         basketbolcuList.add(stephencurry);
 
-        System.out.println(basketbolcuList.get(3).getSporcuIsim());
+        System.out.println(futbolcuList.get(1).getSporcuIsim());
 
+        // Objeleri arrayList e atama başarılı. bunu sout la görmüs olduk
+        /*for (Futbolcu a_futbolcu: futbolcuList) {
+
+            System.out.println(a_futbolcu.toString());
+        }*/
+
+
+        Scanner scanner = new Scanner(System.in);
+
+        Random random = new Random();
+
+        ArrayList<Sporcu> pcCardList = new ArrayList<Sporcu>();
+        ArrayList<Sporcu> userCardList = new ArrayList<Sporcu>();
+        int r;
+        int n = 8;
+
+
+        for (int i = 0; i<4; i++){//bilgisayarin kartlarini random atama yapıyoruz (bir futbol bir basket)
+            r = random.nextInt(n);
+            pcCardList.add(futbolcuList.get(r));
+            futbolcuList.remove(r);
+            r = random.nextInt(n);
+            pcCardList.add(basketbolcuList.get(r));
+            System.out.println("r:"+r);
+            basketbolcuList.remove(r);
+            n--;
+        }
+        n = 4;
+        for (int i = 0; i<4; i++){//kullanicinin kartlarini random atama yapıyoruz (bir futbol bir basket)
+            r = random.nextInt(n);
+            userCardList.add(futbolcuList.get(r));
+            futbolcuList.remove(r);
+            r = random.nextInt(n);
+            userCardList.add(basketbolcuList.get(r));
+            System.out.println("r:"+r);
+            basketbolcuList.remove(r);
+            n--;
+
+        }
+
+        for(int i = 0;i<8;i++){
+            System.out.println("user listten: "+userCardList.get(i).getSporcuIsim());
+        }
+
+        for(int i = 0;i<8;i++){
+            System.out.println("pc listten: "+pcCardList.get(i).getSporcuIsim());
+        }
+       //Basketbolcu kartlari.
+
+
+        /*for (int i = 0; i<4; i++){//bilgisayarin FUTBOLCU kartlarini random atama yapıyoruz
+            r = random.nextInt(n);
+            pcCardList.add(basketbolcuList.get(r));
+            System.out.println("r:"+r);
+            basketbolcuList.remove(r);
+            n--;
+        }
+        for (int i = 0; i<4; i++){//kullanicinin FUTBOLCU kartlarini random atama yapıyoruz
+            r = random.nextInt(n);
+            userCardList.add(basketbolcuList.get(r));
+            System.out.println("r:"+r);
+            basketbolcuList.remove(r);
+            n--;
+        }*/
 
     }
 }
