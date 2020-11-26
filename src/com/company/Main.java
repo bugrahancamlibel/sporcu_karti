@@ -1,5 +1,7 @@
 package com.company;
 
+import com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -122,6 +124,7 @@ public class Main extends JFrame{
             basketbolcuList.remove(r);
             n--;
         }*/
+
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (ClassNotFoundException e) {
@@ -133,13 +136,20 @@ public class Main extends JFrame{
         } catch (UnsupportedLookAndFeelException e) {
             e.printStackTrace();
         }
+
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                form1 f = new form1();
+                form2 f = new form2();
                 f.setVisible(true);
+
             }
         });
+
+
+
+
+
 
 
 
