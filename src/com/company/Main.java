@@ -2,7 +2,9 @@ package com.company;
 
 import com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
 
+
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -19,6 +21,7 @@ public class Main extends JFrame{
 
         ArrayList<Futbolcu> futbolcuList = new ArrayList<Futbolcu>();
         ArrayList<Sporcu> basketbolcuList = new ArrayList<Sporcu>();
+
         // Futbolcu kartlari.
         Futbolcu futbolcu1 = new Futbolcu("MESSI", "BARCELONA", 95, 90, 99);
         Futbolcu futbolcu2 = new Futbolcu("RONALDO", "JUVENTUS", 95, 90, 99);
@@ -146,9 +149,38 @@ public class Main extends JFrame{
                 form2 f = new form2();
                 f.setVisible(true);
 
+                Image img1 = new ImageIcon(this.getClass().getResource("De Bruyne.png")).getImage();
+                f.button2.setIcon(new ImageIcon(img1));
+
+                Image img2 = new ImageIcon(this.getClass().getResource("Haaland.png")).getImage();
+                f.button3.setIcon(new ImageIcon(img2));
+
+                Image img3 = new ImageIcon(this.getClass().getResource("Ibrahimovic.png")).getImage();
+                f.button4.setIcon(new ImageIcon(img3));
+
+                Image img4 = new ImageIcon(this.getClass().getResource("Lewandowski.png")).getImage();
+                f.button5.setIcon(new ImageIcon(img4));
+
+                Image img5 = new ImageIcon(this.getClass().getResource("Mbappé.png")).getImage();
+                f.button6.setIcon(new ImageIcon(img5));
+
+                Image img6 = new ImageIcon(this.getClass().getResource("Messi.png")).getImage();
+                f.button7.setIcon(new ImageIcon(img6));
+
+                Image img7 = new ImageIcon(this.getClass().getResource("Neymar.png")).getImage();
+                f.button8.setIcon(new ImageIcon(img7));
+
+                Image img8 = new ImageIcon(this.getClass().getResource("Ronaldo.png")).getImage();
+                f.button9.setIcon(new ImageIcon(img8));
+
+
 
             }
         });
+
+
+
+
 
 
 

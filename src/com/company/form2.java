@@ -1,7 +1,8 @@
 package com.company;
 
-import javax.swing.*;
-import java.awt.*;
+
+ import javax.swing.*;
+ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -41,6 +42,7 @@ public class form2 extends JFrame {
 
     public form2() {
 
+
         add(panel1);
         setSize(1600,1000);
         setTitle("Kart Oyunu");
@@ -64,6 +66,8 @@ public class form2 extends JFrame {
         button18.setVisible(false);
         button19.setVisible(false);
 
+
+
         button2.setPreferredSize(new Dimension(200,300));
         button3.setPreferredSize(new Dimension(200,300));
         button4.setPreferredSize(new Dimension(200,300));
@@ -84,6 +88,7 @@ public class form2 extends JFrame {
         button19.setPreferredSize(new Dimension(200,300));
 
 
+
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -92,6 +97,7 @@ public class form2 extends JFrame {
                 textField1.setVisible(false);
                 button1.setVisible(false);
                 button2.setVisible(true);
+
                 button3.setVisible(true);
                 button4.setVisible(true);
                 button5.setVisible(true);
