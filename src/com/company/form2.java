@@ -134,6 +134,7 @@ public class form2 extends JFrame {
                 button18.setVisible(true);
                 button19.setVisible(true);
 
+                button10.setVisible(false);
 
 
             }
@@ -155,6 +156,8 @@ public class form2 extends JFrame {
                 panel_b.setVisible(true);
                 button18.setVisible(true);
                 button19.setVisible(true);
+
+                button11.setVisible(false);
             }
         });
 
@@ -166,6 +169,8 @@ public class form2 extends JFrame {
                 panel_b.setVisible(true);
                 button18.setVisible(true);
                 button19.setVisible(true);
+
+                button12.setVisible(false);
             }
         });
 
@@ -177,6 +182,8 @@ public class form2 extends JFrame {
                 panel_b.setVisible(true);
                 button18.setVisible(true);
                 button19.setVisible(true);
+
+                button13.setVisible(false);
             }
         });
 
@@ -188,6 +195,8 @@ public class form2 extends JFrame {
                 panel_b.setVisible(true);
                 button18.setVisible(true);
                 button19.setVisible(true);
+
+                button14.setVisible(false);
             }
         });
 
@@ -199,6 +208,8 @@ public class form2 extends JFrame {
                 panel_b.setVisible(true);
                 button18.setVisible(true);
                 button19.setVisible(true);
+
+                button15.setVisible(false);
             }
         });
 
@@ -210,6 +221,8 @@ public class form2 extends JFrame {
                 panel_b.setVisible(true);
                 button18.setVisible(true);
                 button19.setVisible(true);
+
+                button16.setVisible(false);
             }
         });
 
@@ -221,6 +234,8 @@ public class form2 extends JFrame {
                 panel_b.setVisible(true);
                 button18.setVisible(true);
                 button19.setVisible(true);
+
+                button17.setVisible(false);
             }
         });
 
