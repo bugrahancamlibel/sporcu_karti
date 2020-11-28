@@ -13,7 +13,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class Main extends JFrame{
+public class Main extends form2{
 
     public static void main(String[] args) {
 
@@ -35,29 +35,7 @@ public class Main extends JFrame{
                 form2 f = new form2();
                 f.setVisible(true);
 
-                Image img1 = new ImageIcon(this.getClass().getResource("De Bruyne.png")).getImage();
-                f.button2.setIcon(new ImageIcon(img1));
 
-                Image img2 = new ImageIcon(this.getClass().getResource("Haaland.png")).getImage();
-                f.button3.setIcon(new ImageIcon(img2));
-
-                Image img3 = new ImageIcon(this.getClass().getResource("Ibrahimovic.png")).getImage();
-                f.button4.setIcon(new ImageIcon(img3));
-
-                Image img4 = new ImageIcon(this.getClass().getResource("Lewandowski.png")).getImage();
-                f.button5.setIcon(new ImageIcon(img4));
-
-                Image img5 = new ImageIcon(this.getClass().getResource("Mbappé.png")).getImage();
-                f.button6.setIcon(new ImageIcon(img5));
-
-                Image img6 = new ImageIcon(this.getClass().getResource("Messi.png")).getImage();
-                f.button7.setIcon(new ImageIcon(img6));
-
-                Image img7 = new ImageIcon(this.getClass().getResource("Neymar.png")).getImage();
-                f.button8.setIcon(new ImageIcon(img7));
-
-                Image img8 = new ImageIcon(this.getClass().getResource("Ronaldo.png")).getImage();
-                f.button9.setIcon(new ImageIcon(img8));
 
 
                 //***************************************************
@@ -65,6 +43,18 @@ public class Main extends JFrame{
 
                 ArrayList<Futbolcu> futbolcuList = new ArrayList<Futbolcu>();
                 ArrayList<Sporcu> basketbolcuList = new ArrayList<Sporcu>();
+                ArrayList<String> photos = new ArrayList<String>();
+                ArrayList<String> sorted_photos = new ArrayList<String>();
+
+
+                photos.add("Messi.png");
+                photos.add("Ronaldo.png");
+                photos.add("De Bruyne.png");
+                photos.add("Neymar.png");
+                photos.add("Ibrahimovic.png");
+                photos.add("Haaland.png");
+                photos.add("Lewandowski.png");
+                photos.add("Mbappé.png");
 
                 // Futbolcu kartlari.
                 Futbolcu futbolcu1 = new Futbolcu("MESSI", "BARCELONA", 95, 90, 99);
@@ -122,22 +112,11 @@ public class Main extends JFrame{
                 int r;
                 int n = 8;
 
-
-                for (int i = 0; i < 4; i++) {//bilgisayarin kartlarini random atama yapıyoruz (bir futbol bir basket)
-                    r = random.nextInt(n);
-                    pcCardList.add(futbolcuList.get(r));
-                    futbolcuList.remove(r);
-                    r = random.nextInt(n);
-                    pcCardList.add(basketbolcuList.get(r));
-                    System.out.println("r:" + r);
-                    basketbolcuList.remove(r);
-                    n--;
-                }
-                n = 4;
                 for (int i = 0; i < 4; i++) {//kullanicinin kartlarini random atama yapıyoruz (bir futbol bir basket)
                     r = random.nextInt(n);
                     userCardList.add(futbolcuList.get(r));
-
+                    sorted_photos.add(photos.get(r));
+                    photos.remove(r);
                     futbolcuList.remove(r);
                     r = random.nextInt(n);
                     userCardList.add(basketbolcuList.get(r));
@@ -147,6 +126,20 @@ public class Main extends JFrame{
 
                 }
 
+                for (int i = 0; i < 4; i++) {//bilgisayarin kartlarini random atama yapıyoruz (bir futbol bir basket)
+                    r = random.nextInt(n);
+                    pcCardList.add(futbolcuList.get(r));
+
+                    futbolcuList.remove(r);
+                    r = random.nextInt(n);
+                    pcCardList.add(basketbolcuList.get(r));
+                    System.out.println("r:" + r);
+                    basketbolcuList.remove(r);
+                    n--;
+                }
+                n = 4;
+
+
                 for (int i = 0; i < 8; i++) {
                     System.out.println("user listten: " + userCardList.get(i).getSporcuIsim());
                 }
@@ -155,25 +148,23 @@ public class Main extends JFrame{
                     System.out.println("pc listten: " + pcCardList.get(i).getSporcuIsim());
                 }
 
+                System.out.println(sorted_photos);
+
+                Image img1 = new ImageIcon(this.getClass().getResource(sorted_photos.get(0))).getImage();
+                f.button2.setIcon(new ImageIcon(img1));
 
 
+                Image img3 = new ImageIcon(this.getClass().getResource(sorted_photos.get(1))).getImage();
+                f.button4.setIcon(new ImageIcon(img3));
 
 
+                Image img5 = new ImageIcon(this.getClass().getResource(sorted_photos.get(2))).getImage();
+                f.button6.setIcon(new ImageIcon(img5));
 
-        /*for (int i = 0; i<4; i++){//bilgisayarin FUTBOLCU kartlarini random atama yapıyoruz
-            r = random.nextInt(n);
-            pcCardList.add(basketbolcuList.get(r));
-            System.out.println("r:"+r);
-            basketbolcuList.remove(r);
-            n--;
-        }
-        for (int i = 0; i<4; i++){//kullanicinin FUTBOLCU kartlarini random atama yapıyoruz
-            r = random.nextInt(n);
-            userCardList.add(basketbolcuList.get(r));
-            System.out.println("r:"+r);
-            basketbolcuList.remove(r);
-            n--;
-        }*/
+
+                Image img7 = new ImageIcon(this.getClass().getResource(sorted_photos.get(3))).getImage();
+                f.button8.setIcon(new ImageIcon(img7));
+
 
 
 
