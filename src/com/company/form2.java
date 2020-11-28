@@ -9,35 +9,37 @@ import java.io.IOException;
 public class form2 extends JFrame {
 
 
-    private JPanel panel1;
-    private JTextField textField1;
-    private JButton button1;
-    private JButton button2;
-    private JButton button3;
-    private JButton button4;
-    private JButton button5;
-    private JButton button6;
-    private JButton button7;
-    private JButton button8;
-    private JButton button9;
-    private JPanel panel2;
-    private JPanel panel_a;
-    private JPanel panel_b;
-    private JPanel panel_c;
-    private JPanel panel_d;
-    private JPanel panel_e;
-    private JPanel panel_f;
-    private JPanel panel_g;
-    private JButton button10;
-    private JButton button11;
-    private JButton button12;
-    private JButton button13;
-    private JButton button14;
-    private JButton button15;
-    private JButton button16;
-    private JButton button17;
-    private JButton button18;
-    private JButton button19;
+
+
+    protected JPanel panel1;
+    protected JTextField textField1;
+    protected JButton button1;
+    protected JButton button2;
+    protected JButton button3;
+    protected JButton button4;
+    protected JButton button5;
+    protected JButton button6;
+    protected JButton button7;
+    protected JButton button8;
+    protected JButton button9;
+    protected JPanel panel2;
+    protected JPanel panel_a;
+    protected JPanel panel_b;
+    protected JPanel panel_c;
+    protected JPanel panel_d;
+    protected JPanel panel_e;
+    protected JPanel panel_f;
+    protected JPanel panel_g;
+    protected JButton button10;
+    protected JButton button11;
+    protected JButton button12;
+    protected JButton button13;
+    protected JButton button14;
+    protected JButton button15;
+    protected JButton button16;
+    protected JButton button17;
+    protected JButton button18;
+    protected JButton button19;
 
 
     public form2() {

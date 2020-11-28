@@ -11,7 +11,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class Main extends JFrame{
+public class Main extends form2{
 
     public static void main(String[] args) {
 
@@ -149,6 +149,10 @@ public class Main extends JFrame{
 
             }
         });
+
+
+        form2 f = new form2();
+
 
 
 
