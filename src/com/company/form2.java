@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class form2 extends JFrame {
 
@@ -27,11 +28,22 @@ public class form2 extends JFrame {
     private JPanel panel_e;
     private JPanel panel_f;
     private JPanel panel_g;
+    private JButton button10;
+    private JButton button11;
+    private JButton button12;
+    private JButton button13;
+    private JButton button14;
+    private JButton button15;
+    private JButton button16;
+    private JButton button17;
+    private JButton button18;
+    private JButton button19;
 
-    public form2(){
+
+    public form2() {
 
         add(panel1);
-        setSize(400,200);
+        setSize(1600,1000);
         setTitle("Kart Oyunu");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         button2.setVisible(false);
@@ -42,7 +54,35 @@ public class form2 extends JFrame {
         button7.setVisible(false);
         button8.setVisible(false);
         button9.setVisible(false);
+        button10.setVisible(false);
+        button11.setVisible(false);
+        button12.setVisible(false);
+        button13.setVisible(false);
+        button14.setVisible(false);
+        button15.setVisible(false);
+        button16.setVisible(false);
+        button17.setVisible(false);
+        button18.setVisible(false);
+        button19.setVisible(false);
 
+        button2.setPreferredSize(new Dimension(200,300));
+        button3.setPreferredSize(new Dimension(200,300));
+        button4.setPreferredSize(new Dimension(200,300));
+        button5.setPreferredSize(new Dimension(200,300));
+        button6.setPreferredSize(new Dimension(200,300));
+        button7.setPreferredSize(new Dimension(200,300));
+        button8.setPreferredSize(new Dimension(200, 300));
+        button9.setPreferredSize(new Dimension(200,300));
+        button10.setPreferredSize(new Dimension(200,300));
+        button11.setPreferredSize(new Dimension(200,300));
+        button12.setPreferredSize(new Dimension(200,300));
+        button13.setPreferredSize(new Dimension(200,300));
+        button14.setPreferredSize(new Dimension(200,300));
+        button15.setPreferredSize(new Dimension(200,300));
+        button16.setPreferredSize(new Dimension(200,300));
+        button17.setPreferredSize(new Dimension(200,300));
+        button18.setPreferredSize(new Dimension(200,300));
+        button19.setPreferredSize(new Dimension(200,300));
 
 
         button1.addActionListener(new ActionListener() {
@@ -53,21 +93,22 @@ public class form2 extends JFrame {
                 textField1.setVisible(false);
                 button1.setVisible(false);
                 button2.setVisible(true);
-                button2.setPreferredSize(new Dimension(200,500));
                 button3.setVisible(true);
-                button3.setPreferredSize(new Dimension(200,500));
                 button4.setVisible(true);
-                button4.setPreferredSize(new Dimension(200,500));
                 button5.setVisible(true);
-                button5.setPreferredSize(new Dimension(200,500));
                 button6.setVisible(true);
-                button6.setPreferredSize(new Dimension(200,500));
                 button7.setVisible(true);
-                button7.setPreferredSize(new Dimension(200,500));
                 button8.setVisible(true);
-                button8.setPreferredSize(new Dimension(200,500));
                 button9.setVisible(true);
-                button9.setPreferredSize(new Dimension(200,500));
+                button10.setVisible(true);
+                button11.setVisible(true);
+                button12.setVisible(true);
+                button13.setVisible(true);
+                button14.setVisible(true);
+                button15.setVisible(true);
+                button16.setVisible(true);
+                button17.setVisible(true);
+
                 panel_a.setVisible(false);
                 panel_b.setVisible(false);
                 panel_c.setVisible(false);
@@ -85,66 +126,113 @@ public class form2 extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 button2.setVisible(false);
                 panel_a.setVisible(true);
+                button18.setVisible(true);
+                button19.setVisible(true);
 
 
 
             }
         });
+        button18.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                button18.setVisible(false);
+                button19.setVisible(false);
+            }
+        });
+
+
 
         button3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 button3.setVisible(false);
                 panel_b.setVisible(true);
+                button18.setVisible(true);
+                button19.setVisible(true);
             }
         });
+
 
         button4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 button4.setVisible(false);
                 panel_b.setVisible(true);
+                button18.setVisible(true);
+                button19.setVisible(true);
             }
         });
+
 
         button5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 button5.setVisible(false);
                 panel_b.setVisible(true);
+                button18.setVisible(true);
+                button19.setVisible(true);
             }
         });
+
 
         button6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 button6.setVisible(false);
                 panel_b.setVisible(true);
+                button18.setVisible(true);
+                button19.setVisible(true);
             }
         });
+
 
         button7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 button7.setVisible(false);
                 panel_b.setVisible(true);
+                button18.setVisible(true);
+                button19.setVisible(true);
             }
         });
+
 
         button8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 button8.setVisible(false);
                 panel_b.setVisible(true);
+                button18.setVisible(true);
+                button19.setVisible(true);
             }
         });
+
 
         button9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 button9.setVisible(false);
                 panel_b.setVisible(true);
+                button18.setVisible(true);
+                button19.setVisible(true);
             }
         });
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
+
+  
 }

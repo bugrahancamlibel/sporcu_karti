@@ -5,6 +5,7 @@ import com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -13,6 +14,7 @@ import java.util.Scanner;
 public class Main extends JFrame{
 
     public static void main(String[] args) {
+
 
 
         ArrayList<Futbolcu> futbolcuList = new ArrayList<Futbolcu>();
@@ -143,8 +145,12 @@ public class Main extends JFrame{
                 form2 f = new form2();
                 f.setVisible(true);
 
+
+
             }
         });
+
+
 
 
 
