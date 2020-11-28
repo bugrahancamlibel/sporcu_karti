@@ -8,9 +8,6 @@ import java.io.IOException;
 
 public class form2 extends JFrame {
 
-
-
-
     protected JPanel panel1;
     protected JTextField textField1;
     protected JButton button1;
@@ -221,20 +218,9 @@ public class form2 extends JFrame {
             }
         });
 
-
-
-
-
-
-
-
-
-
-
-
     }
 
 
 
-  
+
 }

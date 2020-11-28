@@ -11,7 +11,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class Main extends form2{
+public class Main extends JFrame{
 
     public static void main(String[] args) {
 
@@ -90,6 +90,7 @@ public class Main extends form2{
         for (int i = 0; i < 4; i++) {//kullanicinin kartlarini random atama yapıyoruz (bir futbol bir basket)
             r = random.nextInt(n);
             userCardList.add(futbolcuList.get(r));
+
             futbolcuList.remove(r);
             r = random.nextInt(n);
             userCardList.add(basketbolcuList.get(r));
@@ -146,21 +147,8 @@ public class Main extends form2{
                 f.setVisible(true);
 
 
-
             }
         });
-
-
-        form2 f = new form2();
-
-
-
-
-
-
-
-
-
 
 
 
