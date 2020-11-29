@@ -1,13 +1,8 @@
 package com.company;
 
-import com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
-
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -36,6 +31,7 @@ public class Main extends JFrame{
         ArrayList<String> sorted_photos = new ArrayList<String>();
 
 
+
         photos.add("Messi.png");
         photos.add("Ronaldo.png");
         photos.add("De Bruyne.png");
@@ -44,6 +40,7 @@ public class Main extends JFrame{
         photos.add("Haaland.png");
         photos.add("Lewandowski.png");
         photos.add("Mbappé.png");
+
 
         // Futbolcu kartlari.
         Futbolcu futbolcu1 = new Futbolcu("MESSI", "BARCELONA", 95, 90, 99);
@@ -64,14 +61,14 @@ public class Main extends JFrame{
         futbolcuList.add(futbolcu7);
         futbolcuList.add(futbolcu8);
 
-        Basketbolcu lebronjames = new Basketbolcu("Lebron James", " Los Angeles Lakers", 89, 84, 70);
-        Basketbolcu giannisantetokounmpo = new Basketbolcu("Giannis Antetokounmpo", " Milwaukee Bucks", 89, 84, 70);
+        Basketbolcu lebronjames = new Basketbolcu("Lebron James", " Los Angeles Lakers", 89, 94, 90);
+        Basketbolcu giannisantetokounmpo = new Basketbolcu("Giannis Antetokounmpo", " Milwaukee Bucks", 89, 94, 90);
         Basketbolcu kawhileonard = new Basketbolcu("Kawhi Leonard", " Los Angeles Clippers", 79, 92, 89);
-        Basketbolcu jamesharden = new Basketbolcu("James Harden", "Houston Rockets", 79, 91, 86);
-        Basketbolcu anthonydavis = new Basketbolcu("Anthony Davis", "Los Angeles Lakers", 90, 87, 85);
-        Basketbolcu kevindurant = new Basketbolcu("Kevin Durant", "Brooklyn Nets", 80, 94, 89);
-        Basketbolcu damianlillard = new Basketbolcu("Damian Lillard", " Portland Trail Blazers", 63, 92, 89);
-        Basketbolcu stephencurry = new Basketbolcu("Stephen Curry", "Golden State Warriors", 58, 95, 92);
+        Basketbolcu jamesharden = new Basketbolcu("James Harden", "Houston Rockets", 88, 94, 86);
+        Basketbolcu anthonydavis = new Basketbolcu("Anthony Davis", "Los Angeles Lakers", 90, 84, 85);
+        Basketbolcu kevindurant = new Basketbolcu("Kevin Durant", "Brooklyn Nets", 79, 94, 89);
+        Basketbolcu damianlillard = new Basketbolcu("Damian Lillard", " Portland Trail Blazers", 79, 92, 89);
+        Basketbolcu stephencurry = new Basketbolcu("Stephen Curry", "Golden State Warriors", 89, 95, 92);
 
         basketbolcuList.add(lebronjames);
         basketbolcuList.add(giannisantetokounmpo);
@@ -166,6 +163,16 @@ public class Main extends JFrame{
 
                 Image img7 = new ImageIcon(this.getClass().getResource(sorted_photos.get(3))).getImage();
                 f.button8.setIcon(new ImageIcon(img7));
+
+                Image img2 = new ImageIcon(this.getClass().getResource("harden.png")).getImage();
+                f.button3.setIcon(new ImageIcon(img2));
+
+                Image img4 = new ImageIcon(this.getClass().getResource("lebron.png")).getImage();
+                f.button5 .setIcon(new ImageIcon(img4));
+
+
+
+
 
 
 
