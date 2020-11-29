@@ -6,8 +6,9 @@ package com.company;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+ import java.util.ArrayList;
 
-public class form2 extends JFrame {
+public class form2 extends Main {
 
     protected JPanel panel1;
     protected JTextField textField1;
@@ -40,11 +41,11 @@ public class form2 extends JFrame {
     protected JButton button19;
 
 
-    public form2() {
+    public form2(ArrayList sorted_photos) {
 
 
         add(panel1);
-        setSize(1600,1000);
+        setSize(1920,1080);
         setTitle("Kart Oyunu");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         button2.setVisible(false);
@@ -109,6 +110,7 @@ public class form2 extends JFrame {
                 button11.setVisible(true);
                 button12.setVisible(true);
                 button13.setVisible(true);
+
                 button14.setVisible(true);
                 button15.setVisible(true);
                 button16.setVisible(true);
@@ -136,9 +138,13 @@ public class form2 extends JFrame {
 
                 button10.setVisible(false);
 
+                Image img1 = new ImageIcon(this.getClass().getResource(String.valueOf(sorted_photos.get(0)))).getImage();
+                button18.setIcon(new ImageIcon(img1));
+
 
             }
         });
+
         button18.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -171,6 +177,9 @@ public class form2 extends JFrame {
                 button19.setVisible(true);
 
                 button12.setVisible(false);
+
+                Image img1 = new ImageIcon(this.getClass().getResource(String.valueOf(sorted_photos.get(1)))).getImage();
+                button18.setIcon(new ImageIcon(img1));
             }
         });
 
@@ -197,6 +206,9 @@ public class form2 extends JFrame {
                 button19.setVisible(true);
 
                 button14.setVisible(false);
+
+                Image img1 = new ImageIcon(this.getClass().getResource(String.valueOf(sorted_photos.get(2)))).getImage();
+                button18.setIcon(new ImageIcon(img1));
             }
         });
 
@@ -223,6 +235,9 @@ public class form2 extends JFrame {
                 button19.setVisible(true);
 
                 button16.setVisible(false);
+
+                Image img1 = new ImageIcon(this.getClass().getResource(String.valueOf(sorted_photos.get(3)))).getImage();
+                button18.setIcon(new ImageIcon(img1));
             }
         });
 
@@ -240,8 +255,5 @@ public class form2 extends JFrame {
         });
 
     }
-
-
-
 
 }
