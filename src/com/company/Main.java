@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Main extends JFrame{
 
     public static void main(String[] args) {
-
+        
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (ClassNotFoundException e) {
@@ -29,6 +29,8 @@ public class Main extends JFrame{
         ArrayList<Sporcu> basketbolcuList = new ArrayList<Sporcu>();
         ArrayList<String> photos = new ArrayList<String>();
         ArrayList<String> sorted_photos = new ArrayList<String>();
+        ArrayList<String> photos_basketbol = new ArrayList<String>();
+        ArrayList<String> basketbol_sorted_photos = new ArrayList<String>();
 
 
 
@@ -40,6 +42,15 @@ public class Main extends JFrame{
         photos.add("Haaland.png");
         photos.add("Lewandowski.png");
         photos.add("Mbappé.png");
+
+        photos_basketbol.add("antetokounmpo.png");
+        photos_basketbol.add("curry.png");
+        photos_basketbol.add("davis.png");
+        photos_basketbol.add("durant.png");
+        photos_basketbol.add("harden.png");
+        photos_basketbol.add("kawhi.png");
+        photos_basketbol.add("lebron.png");
+        photos_basketbol.add("lillard.png");
 
 
         // Futbolcu kartlari.
@@ -106,16 +117,20 @@ public class Main extends JFrame{
             futbolcuList.remove(r);
             r = random.nextInt(n);
             userCardList.add(basketbolcuList.get(r));
+            basketbol_sorted_photos.add(photos_basketbol.get(r));
+            photos_basketbol.remove(r);
             System.out.println("r:" + r);
             basketbolcuList.remove(r);
             n--;
 
         }
 
+
         for (int i = 0; i < 4; i++) {//bilgisayarin kartlarini random atama yapıyoruz (bir futbol bir basket)
             r = random.nextInt(n);
             pcCardList.add(futbolcuList.get(r));
-
+            sorted_photos.add(photos.get(r));
+            photos.remove(r);
             futbolcuList.remove(r);
             r = random.nextInt(n);
             pcCardList.add(basketbolcuList.get(r));
@@ -126,6 +141,7 @@ public class Main extends JFrame{
         n = 4;
 
 
+
         for (int i = 0; i < 8; i++) {
             System.out.println("user listten: " + userCardList.get(i).getSporcuIsim());
         }
@@ -133,10 +149,10 @@ public class Main extends JFrame{
         for (int i = 0; i < 8; i++) {
             System.out.println("pc listten: " + pcCardList.get(i).getSporcuIsim());
         }
+        System.out.println("sortedphotos: "+sorted_photos);
 
 
 
-        System.out.println(sorted_photos);
 
 
                 /*Image img18 = new ImageIcon(this.getClass().getResource(sorted_photos.get(3))).getImage();
@@ -145,33 +161,60 @@ public class Main extends JFrame{
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                form2 f = new form2(sorted_photos);
+                form2 f = new form2(sorted_photos,basketbol_sorted_photos);
                 f.setVisible(true);
 
 
                 Image img1 = new ImageIcon(this.getClass().getResource(sorted_photos.get(0))).getImage();
                 f.button2.setIcon(new ImageIcon(img1));
 
+                Image img2 = new ImageIcon(this.getClass().getResource(basketbol_sorted_photos.get(0))).getImage();
+                f.button3.setIcon(new ImageIcon(img2));
 
                 Image img3 = new ImageIcon(this.getClass().getResource(sorted_photos.get(1))).getImage();
                 f.button4.setIcon(new ImageIcon(img3));
 
+                Image img4 = new ImageIcon(this.getClass().getResource(basketbol_sorted_photos.get(1))).getImage();
+                f.button5.setIcon(new ImageIcon(img4));
 
                 Image img5 = new ImageIcon(this.getClass().getResource(sorted_photos.get(2))).getImage();
                 f.button6.setIcon(new ImageIcon(img5));
 
+                Image img6 = new ImageIcon(this.getClass().getResource(basketbol_sorted_photos.get(2))).getImage();
+                f.button7.setIcon(new ImageIcon(img6));
 
                 Image img7 = new ImageIcon(this.getClass().getResource(sorted_photos.get(3))).getImage();
                 f.button8.setIcon(new ImageIcon(img7));
 
-                Image img2 = new ImageIcon(this.getClass().getResource("harden.png")).getImage();
+                Image img8 = new ImageIcon(this.getClass().getResource(basketbol_sorted_photos.get(3))).getImage();
+                f.button9.setIcon(new ImageIcon(img8));
+
+                /*Image img2 = new ImageIcon(this.getClass().getResource("harden.png")).getImage();
                 f.button3.setIcon(new ImageIcon(img2));
 
                 Image img4 = new ImageIcon(this.getClass().getResource("lebron.png")).getImage();
-                f.button5 .setIcon(new ImageIcon(img4));
+                f.button5 .setIcon(new ImageIcon(img4));*/
 
 
 
+
+                //bilgisayar kartlarının arka yüzünü ekler
+                Image img_background = new ImageIcon(this.getClass().getResource("back_resized.png")).getImage();
+                f.button10.setIcon(new ImageIcon(img_background));
+                Image img_background1 = new ImageIcon(this.getClass().getResource("back_resized.png")).getImage();
+                f.button11.setIcon(new ImageIcon(img_background1));
+                Image img_background2 = new ImageIcon(this.getClass().getResource("back_resized.png")).getImage();
+                f.button12.setIcon(new ImageIcon(img_background2));
+                Image img_background3 = new ImageIcon(this.getClass().getResource("back_resized.png")).getImage();
+                f.button13.setIcon(new ImageIcon(img_background3));
+                Image img_background4 = new ImageIcon(this.getClass().getResource("back_resized.png")).getImage();
+                f.button14.setIcon(new ImageIcon(img_background4));
+                Image img_background5 = new ImageIcon(this.getClass().getResource("back_resized.png")).getImage();
+                f.button15.setIcon(new ImageIcon(img_background5));
+                Image img_background6 = new ImageIcon(this.getClass().getResource("back_resized.png")).getImage();
+                f.button16.setIcon(new ImageIcon(img_background6));
+                Image img_background7 = new ImageIcon(this.getClass().getResource("back_resized.png")).getImage();
+                f.button17.setIcon(new ImageIcon(img_background7));
 
 
 
