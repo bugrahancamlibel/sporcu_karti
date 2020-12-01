@@ -257,6 +257,7 @@ public class form2 extends Main {
                     button14.setVisible(false);
 
                     Image img9 = new ImageIcon(this.getClass().getResource(String.valueOf(sorted_photos.get(2)))).getImage();
+
                     button18.setIcon(new ImageIcon(img9));
                     raund[0]++;
 

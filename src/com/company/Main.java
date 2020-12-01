@@ -26,7 +26,9 @@ public class Main extends JFrame{
 
 
         ArrayList<Futbolcu> futbolcuList = new ArrayList<Futbolcu>();
+        ArrayList<Futbolcu> futbolcuList_kopya = new ArrayList<Futbolcu>();
         ArrayList<Sporcu> basketbolcuList = new ArrayList<Sporcu>();
+
         ArrayList<String> photos = new ArrayList<String>();
         ArrayList<String> sorted_photos = new ArrayList<String>();
         ArrayList<String> photos_basketbol = new ArrayList<String>();
@@ -43,14 +45,14 @@ public class Main extends JFrame{
         photos.add("Lewandowski.png");
         photos.add("Mbappé.png");
 
+        photos_basketbol.add("lebron.png");
         photos_basketbol.add("antetokounmpo.png");
-        photos_basketbol.add("curry.png");
+        photos_basketbol.add("kawhi.png");
+        photos_basketbol.add("harden.png");
         photos_basketbol.add("davis.png");
         photos_basketbol.add("durant.png");
-        photos_basketbol.add("harden.png");
-        photos_basketbol.add("kawhi.png");
-        photos_basketbol.add("lebron.png");
         photos_basketbol.add("lillard.png");
+        photos_basketbol.add("curry.png");
 
 
         // Futbolcu kartlari.
@@ -71,6 +73,8 @@ public class Main extends JFrame{
         futbolcuList.add(futbolcu6);
         futbolcuList.add(futbolcu7);
         futbolcuList.add(futbolcu8);
+
+
 
         Basketbolcu lebronjames = new Basketbolcu("Lebron James", " Los Angeles Lakers", 89, 94, 90);
         Basketbolcu giannisantetokounmpo = new Basketbolcu("Giannis Antetokounmpo", " Milwaukee Bucks", 89, 94, 90);
@@ -106,6 +110,7 @@ public class Main extends JFrame{
         ArrayList<Sporcu> pcCardList = new ArrayList<Sporcu>();
         ArrayList<Sporcu> userCardList = new ArrayList<Sporcu>();
 
+
         int r;
         int n = 8;
 
@@ -125,6 +130,7 @@ public class Main extends JFrame{
 
         }
 
+        n=4;
 
         for (int i = 0; i < 4; i++) {//bilgisayarin kartlarini random atama yapıyoruz (bir futbol bir basket)
             r = random.nextInt(n);
@@ -134,11 +140,12 @@ public class Main extends JFrame{
             futbolcuList.remove(r);
             r = random.nextInt(n);
             pcCardList.add(basketbolcuList.get(r));
+            basketbol_sorted_photos.add(photos_basketbol.get(r));
+            photos_basketbol.remove(r);
             System.out.println("r:" + r);
             basketbolcuList.remove(r);
             n--;
         }
-        n = 4;
 
 
 
@@ -150,9 +157,9 @@ public class Main extends JFrame{
             System.out.println("pc listten: " + pcCardList.get(i).getSporcuIsim());
         }
         System.out.println("sortedphotos: "+sorted_photos);
+        System.out.println("basketcilerin sorted photos: "+basketbol_sorted_photos);
 
-
-
+        System.out.println("futbolcu list kopya: "+futbolcuList_kopya);
 
 
 
@@ -200,6 +207,7 @@ public class Main extends JFrame{
 
 
                 //bilgisayar kartlarının arka yüzünü ekler
+
                 Image img_background = new ImageIcon(this.getClass().getResource("back_resized.png")).getImage();
                 f.button10.setIcon(new ImageIcon(img_background));
                 Image img_background1 = new ImageIcon(this.getClass().getResource("back_resized.png")).getImage();
