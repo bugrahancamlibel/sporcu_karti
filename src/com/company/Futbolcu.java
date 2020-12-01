@@ -1,6 +1,8 @@
 package com.company;
 
 
+import java.util.ArrayList;
+
 public class Futbolcu extends Sporcu {
     //sporcu sınıfından kalıtım alacak.
     private String futbolcuAdi;
@@ -64,13 +66,13 @@ public class Futbolcu extends Sporcu {
 
 
     //Sporcu classından kalıtım alan constructor.
-    public Futbolcu(String sporcuIsim,String sporcuTakim,int penalti,int serbestAtis,int kaleciKarsiKarsiya){
-        super(sporcuIsim,sporcuTakim);
+    public Futbolcu(String sporcuIsim,String sporcuTakim,int ozellik1,int ozellik2,int ozellik3){
+        super(sporcuIsim,sporcuTakim,ozellik1,ozellik2,ozellik3);
         this.futbolcuTakim = sporcuTakim;
         this.futbolcuAdi   = sporcuIsim;
-        this.penalti = penalti;
-        this.serbestAtis = serbestAtis;
-        this.kaleciKarsiKarsiya = kaleciKarsiKarsiya;
+        this.penalti = ozellik1;
+        this.serbestAtis = ozellik2;
+        this.kaleciKarsiKarsiya = ozellik3;
     }
 
 
@@ -91,4 +93,19 @@ public class Futbolcu extends Sporcu {
 
         return "isim : " +futbolcuAdi+" takim : "+futbolcuTakim +" penalti : "+penalti +" serbest atis : " +serbestAtis+" kaleci karsi karsiya : " +kaleciKarsiKarsiya;
     }*/
+
+
+
+
+    public static boolean kartKullanildiMi(){
+
+        boolean kullanildi_mi= false;
+
+
+
+
+        return kullanildi_mi;
+    }
 }
+
+

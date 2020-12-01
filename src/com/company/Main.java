@@ -9,6 +9,47 @@ import java.util.Scanner;
 
 
 public class Main extends JFrame{
+    //kapısma yapılırken fubolcu icin ozellik secimi.
+    public static int futbolcuOzellik(JLabel buton) {
+
+        String yazi = "we can do this.";
+
+        Random rastgele_1 = new Random();
+        int sayi_1 = rastgele_1.nextInt(3);
+        if (sayi_1 == 0) {
+            yazi = "Penaltı";
+            buton.setText(yazi);
+        } else if (sayi_1 == 1) {
+            yazi = "Serbest Atış";
+            buton.setText(yazi);
+        } else if (sayi_1 == 2) {
+            yazi = "Kaleciyle karşı karşıya";
+            buton.setText(yazi);
+        }
+
+        return sayi_1;
+    }
+
+
+    //kapisma yapilirken basketbolcu ozellik secimi.
+    public static int basketbolcuOzellik(JLabel butonn) {
+
+        String yazii = "we can do this.";
+
+        Random rastgele_2 = new Random();
+        int sayi_2 = rastgele_2.nextInt(3);
+        if (sayi_2 == 0) {
+            yazii = "İkilik";
+            butonn.setText(yazii);
+        } else if (sayi_2 == 1) {
+            yazii = "Üçlük";
+            butonn.setText(yazii);
+        } else if (sayi_2 == 2) {
+            yazii = "Serbest Atış";
+            butonn.setText(yazii);
+        }
+        return sayi_2;
+    }
 
     public static void main(String[] args) {
         
@@ -55,6 +96,8 @@ public class Main extends JFrame{
         photos_basketbol.add("curry.png");
 
 
+        Kullanici kullanici = new Kullanici("19020120","",0);
+        Bilgisayar bilgisayar = new Bilgisayar("cmptr","BILGISAYAR",0);
         // Futbolcu kartlari.
         Futbolcu futbolcu1 = new Futbolcu("MESSI", "BARCELONA", 95, 90, 99);
         Futbolcu futbolcu2 = new Futbolcu("RONALDO", "JUVENTUS", 95, 90, 99);
@@ -149,6 +192,7 @@ public class Main extends JFrame{
 
 
 
+
         for (int i = 0; i < 8; i++) {
             System.out.println("user listten: " + userCardList.get(i).getSporcuIsim());
         }
@@ -166,10 +210,11 @@ public class Main extends JFrame{
                 /*Image img18 = new ImageIcon(this.getClass().getResource(sorted_photos.get(3))).getImage();
                 f.button18.setIcon(new ImageIcon(img18));*/
 
+
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                form2 f = new form2(sorted_photos,basketbol_sorted_photos);
+                form2 f = new form2(sorted_photos,basketbol_sorted_photos,userCardList,pcCardList,kullanici,bilgisayar);
                 f.setVisible(true);
 
 
@@ -197,7 +242,7 @@ public class Main extends JFrame{
                 Image img8 = new ImageIcon(this.getClass().getResource(basketbol_sorted_photos.get(3))).getImage();
                 f.button9.setIcon(new ImageIcon(img8));
 
-                /*Image img2 = new ImageIcon(this.getClass().getResource("harden.png")).getImage();
+               /* Image img2 = new ImageIcon(this.getClass().getResource("harden.png")).getImage();
                 f.button3.setIcon(new ImageIcon(img2));
 
                 Image img4 = new ImageIcon(this.getClass().getResource("lebron.png")).getImage();

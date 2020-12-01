@@ -41,4 +41,11 @@ public class Oyuncu {
 
 
     }
+
+    public static int SkorGoster(){
+        int skor = 0;
+
+        return skor;
+
+    }
 }

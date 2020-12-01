@@ -52,14 +52,14 @@ public class Basketbolcu extends Sporcu {
     //Ozelliklerin getter setterları sonu.
 
     //Sporcu classından kalıtım alan constructor.
-    public Basketbolcu(String sporcuIsim,String sporcuTakim,int ikilik, int ucluk, int serbestAtis){
+    public Basketbolcu(String sporcuIsim,String sporcuTakim,int ozellik1, int ozellik2, int ozellik3){
 
-        super(sporcuIsim,sporcuTakim);
+        super(sporcuIsim,sporcuTakim,ozellik1,ozellik2,ozellik3);
         this.basketbolcuAdi = sporcuIsim;
         this.basketbolcuTakim = sporcuTakim;
-        this.ikilik = ikilik;
-        this.ucluk = ucluk;
-        this.serbestAtis = serbestAtis;
+        this.ikilik = ozellik1;
+        this.ucluk = ozellik2;
+        this.serbestAtis = ozellik3;
     }
 
     @Override
