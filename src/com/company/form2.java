@@ -39,6 +39,7 @@ public class form2 extends Main {
     protected JButton button17;
     protected JButton button18;
     protected JButton button19;
+    private JButton button20;
 
 
     public form2(ArrayList sorted_photos, ArrayList basketbol_sorted_photos) {
