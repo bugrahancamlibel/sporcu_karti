@@ -5,7 +5,6 @@ package com.company;
  import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
  import java.util.ArrayList;
 
 public class form2 extends Main {
@@ -41,6 +40,12 @@ public class form2 extends Main {
     protected JButton button19;
     private JLabel label1;
     private JLabel winLabel;
+    private JButton butonBitir;
+    private JLabel oyuncuSkorLabel;
+    private JLabel bilgisayarSkorLabel;
+    private JLabel kazananLabel;
+
+
 
 
     public form2(ArrayList sorted_photos, ArrayList basketbol_sorted_photos, ArrayList<Sporcu> userCardList, ArrayList<Sporcu> pcCardList, Kullanici kullanici, Bilgisayar bilgisayar) {
@@ -56,6 +61,7 @@ public class form2 extends Main {
         int[] raund = {0};
         int[] bot_card_futbol = {4};
         final int[] bot_card_basketbol = {4};
+        String kazanan = "";
 
 
         button2.setVisible(false);
@@ -77,9 +83,12 @@ public class form2 extends Main {
         button18.setVisible(false);
         button19.setVisible(false);
         label1.setVisible(false);
+        kazananLabel.setVisible(false);
+        butonBitir.setVisible(false);
+        oyuncuSkorLabel.setVisible(false);
+        bilgisayarSkorLabel.setVisible(false);
 
         winLabel.setVisible(false);
-
 
 
         button2.setPreferredSize(new Dimension(200,300));
@@ -165,7 +174,6 @@ public class form2 extends Main {
 
 
 
-
                 //bugranin ifinin altinda cagatayin ifleri
                 if(raund[0]%2==0) {
                     futbolcuOzellik(label1);
@@ -183,6 +191,7 @@ public class form2 extends Main {
                             winLabel.setText("Bilgisayar Kazandı!");
 
                         }
+
                         else {
                             winLabel.setText("BERABERE!");
                         }
@@ -236,9 +245,12 @@ public class form2 extends Main {
 
                     button10.setVisible(false);
 
+
                     Image img1 = new ImageIcon(this.getClass().getResource(String.valueOf(sorted_photos.get(0)))).getImage();
                     button18.setIcon(new ImageIcon(img1));
                     raund[0]++;
+
+
 
                     Image img2 = new ImageIcon(this.getClass().getResource(String.valueOf(sorted_photos.get(bot_card_futbol[0])))).getImage();
                     button19.setIcon(new ImageIcon(img2));
@@ -247,11 +259,13 @@ public class form2 extends Main {
                     System.out.println("kullanicin puaniiiiiiiiiiiiiiiiiiiiiiiiiii"+kullanici.getSkor());
                     System.out.println("pccccccccccccccccccc"+bilgisayar.getSkor());
 
+                    bilgisayarSkorLabel.setVisible(true);
+                    bilgisayarSkorLabel.setText("Bilgisayar Skor: "+bilgisayar.getSkor());
+                    oyuncuSkorLabel.setVisible(true);
+                    oyuncuSkorLabel.setText("Oyuncu Skor: "+ kullanici.getSkor());
+
                     if(raund[0]==8){
-                        label1.setText("GAME OVER");
-                        button18.setVisible(false);
-                        button19.setVisible(false);
-                        winLabel.setVisible(false);
+                        butonBitir.setVisible(true);
                     }
 
                 }
@@ -354,11 +368,13 @@ public class form2 extends Main {
                     System.out.println("kullanicin puaniiiiiiiiiiiiiiiiiiiiiiiiiii"+kullanici.getSkor());
                     System.out.println("pccccccccccccccccccc"+bilgisayar.getSkor());
 
+                    bilgisayarSkorLabel.setVisible(true);
+                    bilgisayarSkorLabel.setText("Bilgisayar Skor: "+bilgisayar.getSkor());
+                    oyuncuSkorLabel.setVisible(true);
+                    oyuncuSkorLabel.setText("Oyuncu Skor: "+ kullanici.getSkor());
+
                     if(raund[0]==8){
-                        label1.setText("GAME OVER");
-                        button18.setVisible(false);
-                        button19.setVisible(false);
-                        winLabel.setVisible(false);
+                        butonBitir.setVisible(true);
                     }
                 }
             }
@@ -448,11 +464,13 @@ public class form2 extends Main {
                     System.out.println("kullanicin puaniiiiiiiiiiiiiiiiiiiiiiiiiii"+kullanici.getSkor());
                     System.out.println("pccccccccccccccccccc"+bilgisayar.getSkor());
 
+                    bilgisayarSkorLabel.setVisible(true);
+                    bilgisayarSkorLabel.setText("Bilgisayar Skor: "+bilgisayar.getSkor());
+                    oyuncuSkorLabel.setVisible(true);
+                    oyuncuSkorLabel.setText("Oyuncu Skor: "+ kullanici.getSkor());
+
                     if(raund[0]==8){
-                        label1.setText("GAME OVER");
-                        button18.setVisible(false);
-                        button19.setVisible(false);
-                        winLabel.setVisible(false);
+                        butonBitir.setVisible(true);
                     }
                 }
             }
@@ -538,11 +556,13 @@ public class form2 extends Main {
                     System.out.println("kullanicin puaniiiiiiiiiiiiiiiiiiiiiiiiiii"+kullanici.getSkor());
                     System.out.println("pccccccccccccccccccc"+bilgisayar.getSkor());
 
+                    bilgisayarSkorLabel.setVisible(true);
+                    bilgisayarSkorLabel.setText("Bilgisayar Skor: "+bilgisayar.getSkor());
+                    oyuncuSkorLabel.setVisible(true);
+                    oyuncuSkorLabel.setText("Oyuncu Skor: "+ kullanici.getSkor());
+
                     if(raund[0]==8){
-                        label1.setText("GAME OVER");
-                        button18.setVisible(false);
-                        button19.setVisible(false);
-                        winLabel.setVisible(false);
+                        butonBitir.setVisible(true);
                     }
                 }
             }
@@ -631,11 +651,14 @@ public class form2 extends Main {
                     bot_card_futbol[0]++;
                     System.out.println("kullanicin puaniiiiiiiiiiiiiiiiiiiiiiiiiii"+kullanici.getSkor());
                     System.out.println("pccccccccccccccccccc"+bilgisayar.getSkor());
+
+                    bilgisayarSkorLabel.setVisible(true);
+                    bilgisayarSkorLabel.setText("Bilgisayar Skor: "+bilgisayar.getSkor());
+                    oyuncuSkorLabel.setVisible(true);
+                    oyuncuSkorLabel.setText("Oyuncu Skor: "+ kullanici.getSkor());
+
                     if(raund[0]==8){
-                        label1.setText("GAME OVER");
-                        button18.setVisible(false);
-                        button19.setVisible(false);
-                        winLabel.setVisible(false);
+                        butonBitir.setVisible(true);
                     }
 
                 }
@@ -726,11 +749,13 @@ public class form2 extends Main {
                     System.out.println("kullanicin puaniiiiiiiiiiiiiiiiiiiiiiiiiii"+kullanici.getSkor());
                     System.out.println("pccccccccccccccccccc"+bilgisayar.getSkor());
 
+                    bilgisayarSkorLabel.setVisible(true);
+                    bilgisayarSkorLabel.setText("Bilgisayar Skor: "+bilgisayar.getSkor());
+                    oyuncuSkorLabel.setVisible(true);
+                    oyuncuSkorLabel.setText("Oyuncu Skor: "+ kullanici.getSkor());
+
                     if(raund[0]==8){
-                        label1.setText("GAME OVER");
-                        button18.setVisible(false);
-                        button19.setVisible(false);
-                        winLabel.setVisible(false);
+                        butonBitir.setVisible(true);
                     }
                 }
             }
@@ -822,11 +847,13 @@ public class form2 extends Main {
                     System.out.println("kullanicin puaniiiiiiiiiiiiiiiiiiiiiiiiiii"+kullanici.getSkor());
                     System.out.println("pccccccccccccccccccc"+bilgisayar.getSkor());
 
+                    bilgisayarSkorLabel.setVisible(true);
+                    bilgisayarSkorLabel.setText("Bilgisayar Skor: "+bilgisayar.getSkor());
+                    oyuncuSkorLabel.setVisible(true);
+                    oyuncuSkorLabel.setText("Oyuncu Skor: "+ kullanici.getSkor());
+
                     if(raund[0]==8){
-                        label1.setText("GAME OVER");
-                        button18.setVisible(false);
-                        button19.setVisible(false);
-                        winLabel.setVisible(false);
+                        butonBitir.setVisible(true);
                     }
                 }
             }
@@ -912,15 +939,38 @@ public class form2 extends Main {
                     button19.setIcon(new ImageIcon(img16));
                     bot_card_basketbol[0]++;
                     System.out.println("kullanicin puaniiiiiiiiiiiiiiiiiiiiiiiiiii"+kullanici.getSkor());
-                    System.out.println("pccccccccccccccccccc"+bilgisayar.getSkor());
+                    System.out.println("pccccccccccccccccccc"+bilgisayar_puan);
+
+                    bilgisayarSkorLabel.setVisible(true);
+                    bilgisayarSkorLabel.setText("Bilgisayar Skor: "+bilgisayar.getSkor());
+                    oyuncuSkorLabel.setVisible(true);
+                    oyuncuSkorLabel.setText("Oyuncu Skor: "+ kullanici.getSkor());
+
                     if(raund[0]==8){
-                        label1.setText("GAME OVER");
-                        button18.setVisible(false);
-                        button19.setVisible(false);
-                        winLabel.setVisible(false);
+                        butonBitir.setVisible(true);
                     }
                 }
 
+            }
+        });
+        butonBitir.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("bilg puan: "+bilgisayar.getSkor()+"\nkullanici puan: "+kullanici.getSkor());
+                if(bilgisayar.getSkor()>kullanici.getSkor()){
+                    kazananLabel.setText("KAZANAN BİLGİSAYAR!");
+                }
+                else if(kullanici.getSkor()>bilgisayar.getSkor()){
+                    kazananLabel.setText("KAZANAN OYUNCU!");
+                }
+                kazananLabel.setVisible(true);
+                label1.setText("GAME OVER");
+                button18.setVisible(false);
+                button19.setVisible(false);
+                winLabel.setVisible(false);
+                butonBitir.setVisible(false);
+                oyuncuSkorLabel.setVisible(false);
+                bilgisayarSkorLabel.setVisible(false);
             }
         });
     }
