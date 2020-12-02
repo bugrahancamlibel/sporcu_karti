@@ -96,9 +96,11 @@ public class Main extends JFrame{
         photos_basketbol.add("curry.png");
 
 
+        // Futbolcu kartlari.
+
         Kullanici kullanici = new Kullanici("19020120","",0);
         Bilgisayar bilgisayar = new Bilgisayar("cmptr","BILGISAYAR",0);
-        // Futbolcu kartlari.
+
         Futbolcu futbolcu1 = new Futbolcu("MESSI", "BARCELONA", 95, 90, 99);
         Futbolcu futbolcu2 = new Futbolcu("RONALDO", "JUVENTUS", 95, 90, 99);
         Futbolcu futbolcu3 = new Futbolcu("DE BRUYNE", "MANCHESTER CITY", 85, 95, 85);
@@ -127,6 +129,7 @@ public class Main extends JFrame{
         Basketbolcu kevindurant = new Basketbolcu("Kevin Durant", "Brooklyn Nets", 79, 94, 89);
         Basketbolcu damianlillard = new Basketbolcu("Damian Lillard", " Portland Trail Blazers", 79, 92, 89);
         Basketbolcu stephencurry = new Basketbolcu("Stephen Curry", "Golden State Warriors", 89, 95, 92);
+
 
         basketbolcuList.add(lebronjames);
         basketbolcuList.add(giannisantetokounmpo);
@@ -242,7 +245,7 @@ public class Main extends JFrame{
                 Image img8 = new ImageIcon(this.getClass().getResource(basketbol_sorted_photos.get(3))).getImage();
                 f.button9.setIcon(new ImageIcon(img8));
 
-               /* Image img2 = new ImageIcon(this.getClass().getResource("harden.png")).getImage();
+                /*Image img2 = new ImageIcon(this.getClass().getResource("harden.png")).getImage();
                 f.button3.setIcon(new ImageIcon(img2));
 
                 Image img4 = new ImageIcon(this.getClass().getResource("lebron.png")).getImage();

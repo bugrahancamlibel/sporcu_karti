@@ -1,12 +1,12 @@
 package com.company;
 
 
-import javax.swing.*;
-import java.awt.*;
+ import javax.swing.*;
+ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-import java.util.ArrayList;
+ import java.util.ArrayList;
 
 public class form2 extends Main {
 
@@ -40,6 +40,7 @@ public class form2 extends Main {
     protected JButton button18;
     protected JButton button19;
     private JLabel label1;
+    private JLabel winLabel;
 
 
     public form2(ArrayList sorted_photos, ArrayList basketbol_sorted_photos, ArrayList<Sporcu> userCardList, ArrayList<Sporcu> pcCardList, Kullanici kullanici, Bilgisayar bilgisayar) {
@@ -51,6 +52,7 @@ public class form2 extends Main {
         setSize(1920,1080);
         setTitle("Kart Oyunu");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+
         int[] raund = {0};
         int[] bot_card_futbol = {4};
         final int[] bot_card_basketbol = {4};
@@ -76,7 +78,7 @@ public class form2 extends Main {
         button19.setVisible(false);
         label1.setVisible(false);
 
-
+        winLabel.setVisible(false);
 
 
 
@@ -115,10 +117,12 @@ public class form2 extends Main {
 
 
 
-                String giris;
-                giris = textField1.getText();
+                kullanici.setOyuncuAdi(textField1.getText());
+                System.out.println("Kullanicinin nicki: "+kullanici.getOyuncuAdi());
 
                 textField1.setVisible(false);
+                winLabel.setVisible(true);
+
                 button1.setVisible(false);
                 button2.setVisible(true);
 
@@ -170,12 +174,17 @@ public class form2 extends Main {
                         if(userCardList.get(0).getOzellik1() > pcCardList.get(0).getOzellik1()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
 
                         }
                         else if(userCardList.get(0).getOzellik1() < pcCardList.get(0).getOzellik1()){
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
 
@@ -185,12 +194,17 @@ public class form2 extends Main {
                         if(userCardList.get(0).getOzellik2() > pcCardList.get(0).getOzellik2()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
 
                         }
                         else if(userCardList.get(0).getOzellik2() < pcCardList.get(0).getOzellik2()){
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
                     }
@@ -199,12 +213,17 @@ public class form2 extends Main {
 
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
                         }
                         else if(userCardList.get(0).getOzellik3() < pcCardList.get(0).getOzellik3()){
 
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
 
@@ -227,6 +246,13 @@ public class form2 extends Main {
 
                     System.out.println("kullanicin puaniiiiiiiiiiiiiiiiiiiiiiiiiii"+kullanici.getSkor());
                     System.out.println("pccccccccccccccccccc"+bilgisayar.getSkor());
+
+                    if(raund[0]==8){
+                        label1.setText("GAME OVER");
+                        button18.setVisible(false);
+                        button19.setVisible(false);
+                        winLabel.setVisible(false);
+                    }
 
                 }
 
@@ -259,14 +285,18 @@ public class form2 extends Main {
 
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
 
                         }
                         else if(userCardList.get(1).getOzellik1() < pcCardList.get(1).getOzellik1()){
 
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
-
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
                     }
@@ -275,11 +305,16 @@ public class form2 extends Main {
 
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
                         }
                         else if(userCardList.get(1).getOzellik2() < pcCardList.get(1).getOzellik2()){
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
                     }
@@ -287,12 +322,17 @@ public class form2 extends Main {
                         if(userCardList.get(1).getOzellik3() > pcCardList.get(1).getOzellik3()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
 
                         }
                         else if(userCardList.get(1).getOzellik3() < pcCardList.get(1).getOzellik3()){
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
                     }
@@ -308,11 +348,18 @@ public class form2 extends Main {
 
                     raund[0]++;
 
-                    Image img4 = new ImageIcon(this.getClass().getResource(String.valueOf(sorted_photos.get(bot_card_basketbol[0])))).getImage();
+                    Image img4 = new ImageIcon(this.getClass().getResource(String.valueOf(basketbol_sorted_photos.get(bot_card_basketbol[0])))).getImage();
                     button19.setIcon(new ImageIcon(img4));
                     bot_card_basketbol[0]++;
                     System.out.println("kullanicin puaniiiiiiiiiiiiiiiiiiiiiiiiiii"+kullanici.getSkor());
                     System.out.println("pccccccccccccccccccc"+bilgisayar.getSkor());
+
+                    if(raund[0]==8){
+                        label1.setText("GAME OVER");
+                        button18.setVisible(false);
+                        button19.setVisible(false);
+                        winLabel.setVisible(false);
+                    }
                 }
             }
         });
@@ -330,12 +377,17 @@ public class form2 extends Main {
                         if(userCardList.get(2).getOzellik1() > pcCardList.get(2).getOzellik1()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
 
                         }
                         else if(userCardList.get(2).getOzellik1() < pcCardList.get(2).getOzellik1()){
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
 
@@ -345,12 +397,17 @@ public class form2 extends Main {
                         if(userCardList.get(2).getOzellik2() > pcCardList.get(2).getOzellik2()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
 
                         }
                         else if(userCardList.get(2).getOzellik2() < pcCardList.get(2).getOzellik2()){
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
                     }
@@ -359,12 +416,17 @@ public class form2 extends Main {
 
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
                         }
                         else if(userCardList.get(2).getOzellik3() < pcCardList.get(2).getOzellik3()){
 
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
 
@@ -385,6 +447,13 @@ public class form2 extends Main {
                     bot_card_futbol[0]++;
                     System.out.println("kullanicin puaniiiiiiiiiiiiiiiiiiiiiiiiiii"+kullanici.getSkor());
                     System.out.println("pccccccccccccccccccc"+bilgisayar.getSkor());
+
+                    if(raund[0]==8){
+                        label1.setText("GAME OVER");
+                        button18.setVisible(false);
+                        button19.setVisible(false);
+                        winLabel.setVisible(false);
+                    }
                 }
             }
         });
@@ -402,14 +471,18 @@ public class form2 extends Main {
 
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
 
                         }
                         else if(userCardList.get(3).getOzellik1() < pcCardList.get(3).getOzellik1()){
 
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
-
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
                     }
@@ -418,11 +491,16 @@ public class form2 extends Main {
 
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
                         }
                         else if(userCardList.get(3).getOzellik2() < pcCardList.get(3).getOzellik2()){
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
                     }
@@ -430,12 +508,17 @@ public class form2 extends Main {
                         if(userCardList.get(3).getOzellik3() > pcCardList.get(3).getOzellik3()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
 
                         }
                         else if(userCardList.get(3).getOzellik3() < pcCardList.get(3).getOzellik3()){
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
                     }
@@ -449,11 +532,18 @@ public class form2 extends Main {
                     Image img7 = new ImageIcon(this.getClass().getResource(String.valueOf(basketbol_sorted_photos.get(1)))).getImage();
                     button18.setIcon(new ImageIcon(img7));
                     raund[0]++;
-                    Image img8 = new ImageIcon(this.getClass().getResource(String.valueOf(sorted_photos.get(bot_card_basketbol[0])))).getImage();
+                    Image img8 = new ImageIcon(this.getClass().getResource(String.valueOf(basketbol_sorted_photos.get(bot_card_basketbol[0])))).getImage();
                     button19.setIcon(new ImageIcon(img8));
                     bot_card_basketbol[0]++;
                     System.out.println("kullanicin puaniiiiiiiiiiiiiiiiiiiiiiiiiii"+kullanici.getSkor());
                     System.out.println("pccccccccccccccccccc"+bilgisayar.getSkor());
+
+                    if(raund[0]==8){
+                        label1.setText("GAME OVER");
+                        button18.setVisible(false);
+                        button19.setVisible(false);
+                        winLabel.setVisible(false);
+                    }
                 }
             }
         });
@@ -471,12 +561,17 @@ public class form2 extends Main {
                         if(userCardList.get(4).getOzellik1() > pcCardList.get(4).getOzellik1()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
 
                         }
                         else if(userCardList.get(4).getOzellik1() < pcCardList.get(4).getOzellik1()){
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
 
@@ -486,12 +581,17 @@ public class form2 extends Main {
                         if(userCardList.get(4).getOzellik2() > pcCardList.get(4).getOzellik2()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
 
                         }
                         else if(userCardList.get(4).getOzellik2() < pcCardList.get(4).getOzellik2()){
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
                     }
@@ -500,14 +600,18 @@ public class form2 extends Main {
 
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
                         }
                         else if(userCardList.get(4).getOzellik3() < pcCardList.get(4).getOzellik3()){
 
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
                         }
-
+                        else {
+                            winLabel.setText("BERABERE!");
+                        }
 
                     }
                     button6.setVisible(false);
@@ -527,6 +631,12 @@ public class form2 extends Main {
                     bot_card_futbol[0]++;
                     System.out.println("kullanicin puaniiiiiiiiiiiiiiiiiiiiiiiiiii"+kullanici.getSkor());
                     System.out.println("pccccccccccccccccccc"+bilgisayar.getSkor());
+                    if(raund[0]==8){
+                        label1.setText("GAME OVER");
+                        button18.setVisible(false);
+                        button19.setVisible(false);
+                        winLabel.setVisible(false);
+                    }
 
                 }
             }
@@ -546,14 +656,19 @@ public class form2 extends Main {
 
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
 
                         }
                         else if(userCardList.get(5).getOzellik1() < pcCardList.get(5).getOzellik1()){
 
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
                     }
@@ -562,11 +677,16 @@ public class form2 extends Main {
 
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
                         }
                         else if(userCardList.get(5).getOzellik2() < pcCardList.get(5).getOzellik2()){
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
                     }
@@ -574,12 +694,17 @@ public class form2 extends Main {
                         if(userCardList.get(5).getOzellik3() > pcCardList.get(5).getOzellik3()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
 
                         }
                         else if(userCardList.get(5).getOzellik3() < pcCardList.get(5).getOzellik3()){
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
                     }
@@ -594,12 +719,19 @@ public class form2 extends Main {
                     button18.setIcon(new ImageIcon(img11));
                     raund[0]++;
 
-                    Image img12 = new ImageIcon(this.getClass().getResource(String.valueOf(sorted_photos.get(bot_card_basketbol[0])))).getImage();
+                    Image img12 = new ImageIcon(this.getClass().getResource(String.valueOf(basketbol_sorted_photos.get(bot_card_basketbol[0])))).getImage();
                     button19.setIcon(new ImageIcon(img12));
                     bot_card_basketbol[0]++;
 
                     System.out.println("kullanicin puaniiiiiiiiiiiiiiiiiiiiiiiiiii"+kullanici.getSkor());
                     System.out.println("pccccccccccccccccccc"+bilgisayar.getSkor());
+
+                    if(raund[0]==8){
+                        label1.setText("GAME OVER");
+                        button18.setVisible(false);
+                        button19.setVisible(false);
+                        winLabel.setVisible(false);
+                    }
                 }
             }
         });
@@ -617,12 +749,17 @@ public class form2 extends Main {
                         if(userCardList.get(6).getOzellik1() > pcCardList.get(6).getOzellik1()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
 
                         }
                         else if(userCardList.get(6).getOzellik1() < pcCardList.get(6).getOzellik1()){
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
 
@@ -632,12 +769,17 @@ public class form2 extends Main {
                         if(userCardList.get(6).getOzellik2() > pcCardList.get(6).getOzellik2()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
 
                         }
                         else if(userCardList.get(6).getOzellik2() < pcCardList.get(6).getOzellik2()){
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
                     }
@@ -646,12 +788,17 @@ public class form2 extends Main {
 
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
                         }
                         else if(userCardList.get(6).getOzellik3() < pcCardList.get(6).getOzellik3()){
 
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
 
@@ -674,6 +821,13 @@ public class form2 extends Main {
                     bot_card_futbol[0]++;
                     System.out.println("kullanicin puaniiiiiiiiiiiiiiiiiiiiiiiiiii"+kullanici.getSkor());
                     System.out.println("pccccccccccccccccccc"+bilgisayar.getSkor());
+
+                    if(raund[0]==8){
+                        label1.setText("GAME OVER");
+                        button18.setVisible(false);
+                        button19.setVisible(false);
+                        winLabel.setVisible(false);
+                    }
                 }
             }
         });
@@ -691,14 +845,18 @@ public class form2 extends Main {
 
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
 
                         }
                         else if(userCardList.get(7).getOzellik1() < pcCardList.get(7).getOzellik1()){
 
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
-
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
                     }
@@ -707,11 +865,16 @@ public class form2 extends Main {
 
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
                         }
                         else if(userCardList.get(7).getOzellik2() < pcCardList.get(7).getOzellik2()){
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
                     }
@@ -719,12 +882,17 @@ public class form2 extends Main {
                         if(userCardList.get(7).getOzellik3() > pcCardList.get(7).getOzellik3()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
+                            winLabel.setText("Oyuncu Kazandı!");
 
                         }
                         else if(userCardList.get(7).getOzellik3() < pcCardList.get(7).getOzellik3()){
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
+                            winLabel.setText("Bilgisayar Kazandı!");
 
+                        }
+                        else {
+                            winLabel.setText("BERABERE!");
                         }
 
                     }
@@ -740,16 +908,20 @@ public class form2 extends Main {
                     button18.setIcon(new ImageIcon(img15));
                     raund[0]++;
 
-                    Image img16 = new ImageIcon(this.getClass().getResource(String.valueOf(sorted_photos.get(bot_card_basketbol[0])))).getImage();
+                    Image img16 = new ImageIcon(this.getClass().getResource(String.valueOf(basketbol_sorted_photos.get(bot_card_basketbol[0])))).getImage();
                     button19.setIcon(new ImageIcon(img16));
                     bot_card_basketbol[0]++;
                     System.out.println("kullanicin puaniiiiiiiiiiiiiiiiiiiiiiiiiii"+kullanici.getSkor());
                     System.out.println("pccccccccccccccccccc"+bilgisayar.getSkor());
+                    if(raund[0]==8){
+                        label1.setText("GAME OVER");
+                        button18.setVisible(false);
+                        button19.setVisible(false);
+                        winLabel.setVisible(false);
+                    }
                 }
 
             }
         });
-
     }
-
 }
