@@ -63,10 +63,11 @@ public class Basketbolcu extends Sporcu {
     }
 
     @Override
-    public void sporcuPuaniGoster() {
+    public int[] sporcuPuaniGoster() {
         super.sporcuPuaniGoster();
         System.out.println("Basketcinin adi:"+basketbolcuAdi+" Basketcinin takimi:"+basketbolcuTakim);
         System.out.println("ikiliği:"+ikilik+" ucluk:"+ucluk+" serbesti atisi:"+serbestAtis);
+        return new int [] {ikilik,ucluk,serbestAtis};
     }
 
     //projede bizden istenilen parametresiz constructor.(ne ise yaradigini henuz bilmiyorum)

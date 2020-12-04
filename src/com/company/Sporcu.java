@@ -54,9 +54,10 @@ public class Sporcu  {
     }
     //getter setter son.
 
-    public void sporcuPuaniGoster(){
+    public int[] sporcuPuaniGoster(){
 
 
+        return null;
 
     }
 

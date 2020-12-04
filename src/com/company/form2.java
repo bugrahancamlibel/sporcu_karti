@@ -167,6 +167,7 @@ public class form2 extends Main {
 
         final int[] kullanici_puan = {0};
         final int[] bilgisayar_puan = {0};
+       
 
         button2.addActionListener(new ActionListener() {
             @Override
@@ -176,8 +177,9 @@ public class form2 extends Main {
 
                 //bugranin ifinin altinda cagatayin ifleri
                 if(raund[0]%2==0) {
-                    futbolcuOzellik(label1);
-                    if(futbolcuOzellik(label1) == 0){
+                    
+                    int rand1 = futbolcuOzellik(label1);
+                    if(rand1 == 0){
 
                         if(userCardList.get(0).getOzellik1() > pcCardList.get(0).getOzellik1()){
                             kullanici_puan[0] += 10;
@@ -199,7 +201,7 @@ public class form2 extends Main {
 
                     }
 
-                    else if(futbolcuOzellik(label1) == 1){
+                    else if(rand1 == 1){
                         if(userCardList.get(0).getOzellik2() > pcCardList.get(0).getOzellik2()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
@@ -212,12 +214,12 @@ public class form2 extends Main {
                             winLabel.setText("Bilgisayar Kazandı!");
 
                         }
-                        else {
+                        else  {
                             winLabel.setText("BERABERE!");
                         }
 
                     }
-                    else if(futbolcuOzellik(label1) == 2){
+                    else if(rand1 == 2){
                         if(userCardList.get(0).getOzellik3() > pcCardList.get(0).getOzellik3()){
 
                             kullanici_puan[0] += 10;
@@ -231,7 +233,7 @@ public class form2 extends Main {
                             winLabel.setText("Bilgisayar Kazandı!");
 
                         }
-                        else {
+                        else  {
                             winLabel.setText("BERABERE!");
                         }
 
@@ -293,8 +295,9 @@ public class form2 extends Main {
 
 
                 if (raund[0]%2==1) {
-                    basketbolcuOzellik(label1);
-                    if(basketbolcuOzellik(label1) == 0){
+                    int rand2 = basketbolcuOzellik(label1);
+                   
+                    if(rand2 == 0){
                         if(userCardList.get(1).getOzellik1() > pcCardList.get(1).getOzellik1()){
 
                             kullanici_puan[0] += 10;
@@ -314,7 +317,7 @@ public class form2 extends Main {
                         }
 
                     }
-                    else if(basketbolcuOzellik(label1) == 1){
+                    else if(rand2 == 1){
                         if(userCardList.get(1).getOzellik2() > pcCardList.get(1).getOzellik2()){
 
                             kullanici_puan[0] += 10;
@@ -332,7 +335,7 @@ public class form2 extends Main {
                         }
 
                     }
-                    else if(basketbolcuOzellik(label1) == 2){
+                    else if(rand2 == 2){
                         if(userCardList.get(1).getOzellik3() > pcCardList.get(1).getOzellik3()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
@@ -387,8 +390,9 @@ public class form2 extends Main {
 
 
                 if (raund[0]%2==0) {
-                    futbolcuOzellik(label1);
-                    if(futbolcuOzellik(label1) == 0){
+                    int rand3 = futbolcuOzellik(label1);
+                  
+                    if(rand3 == 0){
 
                         if(userCardList.get(2).getOzellik1() > pcCardList.get(2).getOzellik1()){
                             kullanici_puan[0] += 10;
@@ -409,7 +413,7 @@ public class form2 extends Main {
 
                     }
 
-                    else if(futbolcuOzellik(label1) == 1){
+                    else if(rand3 == 1){
                         if(userCardList.get(2).getOzellik2() > pcCardList.get(2).getOzellik2()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
@@ -427,7 +431,7 @@ public class form2 extends Main {
                         }
 
                     }
-                    else if(futbolcuOzellik(label1) == 2){
+                    else if(rand3 == 2){
                         if(userCardList.get(2).getOzellik3() > pcCardList.get(2).getOzellik3()){
 
                             kullanici_puan[0] += 10;
@@ -483,8 +487,9 @@ public class form2 extends Main {
 
 
                 if(raund[0]%2==1) {
-                    basketbolcuOzellik(label1);
-                    if(basketbolcuOzellik(label1) == 0){
+                    int rand4 = basketbolcuOzellik(label1);
+                    
+                    if(rand4 == 0){
                         if(userCardList.get(3).getOzellik1() > pcCardList.get(3).getOzellik1()){
 
                             kullanici_puan[0] += 10;
@@ -499,12 +504,12 @@ public class form2 extends Main {
                             winLabel.setText("Bilgisayar Kazandı!");
 
                         }
-                        else {
+                        else  {
                             winLabel.setText("BERABERE!");
                         }
 
                     }
-                    else if(basketbolcuOzellik(label1) == 1){
+                    else if(rand4 == 1){
                         if(userCardList.get(3).getOzellik2() > pcCardList.get(3).getOzellik2()){
 
                             kullanici_puan[0] += 10;
@@ -522,7 +527,7 @@ public class form2 extends Main {
                         }
 
                     }
-                    else if(basketbolcuOzellik(label1) == 2){
+                    else if(rand4 == 2){
                         if(userCardList.get(3).getOzellik3() > pcCardList.get(3).getOzellik3()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
@@ -575,8 +580,8 @@ public class form2 extends Main {
 
 
                 if (raund[0]%2==0) {
-                    futbolcuOzellik(label1);
-                    if(futbolcuOzellik(label1) == 0){
+                    int rand4 = futbolcuOzellik(label1);
+                    if(rand4 == 0){
 
                         if(userCardList.get(4).getOzellik1() > pcCardList.get(4).getOzellik1()){
                             kullanici_puan[0] += 10;
@@ -597,7 +602,7 @@ public class form2 extends Main {
 
                     }
 
-                    else if(futbolcuOzellik(label1) == 1){
+                    else if(rand4 == 1){
                         if(userCardList.get(4).getOzellik2() > pcCardList.get(4).getOzellik2()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
@@ -615,7 +620,7 @@ public class form2 extends Main {
                         }
 
                     }
-                    else if(futbolcuOzellik(label1) == 2){
+                    else if(rand4 == 2){
                         if(userCardList.get(4).getOzellik3() > pcCardList.get(4).getOzellik3()){
 
                             kullanici_puan[0] += 10;
@@ -629,7 +634,7 @@ public class form2 extends Main {
                             winLabel.setText("Bilgisayar Kazandı!");
 
                         }
-                        else {
+                        else{
                             winLabel.setText("BERABERE!");
                         }
 
@@ -673,8 +678,8 @@ public class form2 extends Main {
 
 
                 if (raund[0]%2==1) {
-                    basketbolcuOzellik(label1);
-                    if(basketbolcuOzellik(label1) == 0){
+                    int rand4 = basketbolcuOzellik(label1);
+                    if(rand4 == 0){
                         if(userCardList.get(5).getOzellik1() > pcCardList.get(5).getOzellik1()){
 
                             kullanici_puan[0] += 10;
@@ -695,7 +700,7 @@ public class form2 extends Main {
                         }
 
                     }
-                    else if(basketbolcuOzellik(label1) == 1){
+                    else if(rand4 == 1){
                         if(userCardList.get(5).getOzellik2() > pcCardList.get(5).getOzellik2()){
 
                             kullanici_puan[0] += 10;
@@ -708,12 +713,12 @@ public class form2 extends Main {
                             winLabel.setText("Bilgisayar Kazandı!");
 
                         }
-                        else {
+                        else{
                             winLabel.setText("BERABERE!");
                         }
 
                     }
-                    else if(basketbolcuOzellik(label1) == 2){
+                    else if(rand4 == 2){
                         if(userCardList.get(5).getOzellik3() > pcCardList.get(5).getOzellik3()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
@@ -765,16 +770,18 @@ public class form2 extends Main {
         button8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // TODO: sayın ceo lar bakın biz iyi programcılarız. bu kodda başarılı şeyler yaptık. bidahaki programlar için de iyi işler çıkarıcaz.
 
 
                 if (raund[0]%2==0) {
-                    futbolcuOzellik(label1);
-                    if(futbolcuOzellik(label1) == 0){
+                    int rand5 = futbolcuOzellik(label1);
+                    if(rand5 == 0){
 
                         if(userCardList.get(6).getOzellik1() > pcCardList.get(6).getOzellik1()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
                             winLabel.setText("Oyuncu Kazandı!");
+
 
                         }
                         else if(userCardList.get(6).getOzellik1() < pcCardList.get(6).getOzellik1()){
@@ -790,7 +797,7 @@ public class form2 extends Main {
 
                     }
 
-                    else if(futbolcuOzellik(label1) == 1){
+                    else if(rand5 == 1){
                         if(userCardList.get(6).getOzellik2() > pcCardList.get(6).getOzellik2()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
@@ -803,12 +810,12 @@ public class form2 extends Main {
                             winLabel.setText("Bilgisayar Kazandı!");
 
                         }
-                        else {
+                        else{
                             winLabel.setText("BERABERE!");
                         }
 
                     }
-                    else if(futbolcuOzellik(label1) == 2){
+                    else if(rand5 == 2){
                         if(userCardList.get(6).getOzellik3() > pcCardList.get(6).getOzellik3()){
 
                             kullanici_puan[0] += 10;
@@ -866,8 +873,8 @@ public class form2 extends Main {
 
 
                 if (raund[0]%2==1) {
-                    basketbolcuOzellik(label1);
-                    if(basketbolcuOzellik(label1) == 0){
+                    int rand4 = basketbolcuOzellik(label1);
+                    if(rand4 == 0){
                         if(userCardList.get(7).getOzellik1() > pcCardList.get(7).getOzellik1()){
 
                             kullanici_puan[0] += 10;
@@ -887,7 +894,7 @@ public class form2 extends Main {
                         }
 
                     }
-                    else if(basketbolcuOzellik(label1) == 1){
+                    else if(rand4 == 1){
                         if(userCardList.get(7).getOzellik2() > pcCardList.get(7).getOzellik2()){
 
                             kullanici_puan[0] += 10;
@@ -905,7 +912,7 @@ public class form2 extends Main {
                         }
 
                     }
-                    else if(basketbolcuOzellik(label1) == 2){
+                    else if(rand4 == 2){
                         if(userCardList.get(7).getOzellik3() > pcCardList.get(7).getOzellik3()){
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
@@ -931,7 +938,7 @@ public class form2 extends Main {
                     button19.setVisible(true);
 
                     button17.setVisible(false);
-                    Image img15 = new ImageIcon(this.getClass().getResource(String.valueOf(basketbol_sorted_photos.get(2)))).getImage();
+                    Image img15 = new ImageIcon(this.getClass().getResource(String.valueOf(basketbol_sorted_photos.get(3)))).getImage();
                     button18.setIcon(new ImageIcon(img15));
                     raund[0]++;
 

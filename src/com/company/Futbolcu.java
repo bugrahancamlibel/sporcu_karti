@@ -83,11 +83,13 @@ public class Futbolcu extends Sporcu {
     }
 
     @Override
-    public void sporcuPuaniGoster() {
+    public int[] sporcuPuaniGoster() {
         super.sporcuPuaniGoster();
         System.out.println("Futbolcunun penaltisi : "+penalti);
         System.out.println("Futbolcunun serbest arisi : "+serbestAtis);
         System.out.println("Futbolcunun kaleciyle karsi karsiyasi : " + kaleciKarsiKarsiya);
+
+        return new int [] {penalti,serbestAtis,kaleciKarsiKarsiya};
     }
     /*public String toString(){
 
