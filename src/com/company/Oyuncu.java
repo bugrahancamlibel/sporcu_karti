@@ -6,6 +6,7 @@ public class Oyuncu {
     private String oyuncuAdi;
     private int skor;
 
+
     public String getOyuncuID() {
         return oyuncuID;
     }

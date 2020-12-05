@@ -12,6 +12,7 @@ public class Main extends JFrame{
     //kapısma yapılırken fubolcu icin ozellik secimi.
     public static int futbolcuOzellik(JLabel buton) {
 
+
         String yazi = "we can do this.";
 
         Random rastgele_1 = new Random();

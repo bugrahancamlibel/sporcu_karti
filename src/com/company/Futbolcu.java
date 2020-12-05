@@ -8,6 +8,7 @@ public class Futbolcu extends Sporcu {
     private String futbolcuAdi;
     private String futbolcuTakim;
 
+
     private int penalti ;
     private int serbestAtis;
     private int kaleciKarsiKarsiya;

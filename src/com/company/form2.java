@@ -44,8 +44,8 @@ public class form2 extends Main {
     private JLabel oyuncuSkorLabel;
     private JLabel bilgisayarSkorLabel;
     private JLabel kazananLabel;
-
-
+    private JButton oyunuKapatButton;
+    private int a = 0;
 
 
     public form2(ArrayList sorted_photos, ArrayList basketbol_sorted_photos, ArrayList<Sporcu> userCardList, ArrayList<Sporcu> pcCardList, Kullanici kullanici, Bilgisayar bilgisayar) {
@@ -54,8 +54,11 @@ public class form2 extends Main {
 
 
         add(panel1);
-        setSize(1920,1080);
+        setSize(1900,1060);
         setTitle("Kart Oyunu");
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        setUndecorated(true);
+        setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         int[] raund = {0};
@@ -116,8 +119,7 @@ public class form2 extends Main {
 
 
 
-
-
+        
 
         button1.addActionListener(new ActionListener() {
             @Override
@@ -129,6 +131,7 @@ public class form2 extends Main {
                 kullanici.setOyuncuAdi(textField1.getText());
                 System.out.println("Kullanicinin nicki: "+kullanici.getOyuncuAdi());
 
+                oyunuKapatButton.setVisible(false);
                 textField1.setVisible(false);
                 winLabel.setVisible(true);
 
@@ -177,6 +180,12 @@ public class form2 extends Main {
 
                 //bugranin ifinin altinda cagatayin ifleri
                 if(raund[0]%2==0) {
+                    button2.setVisible(false);
+                    panel_a.setVisible(true);
+                    button18.setVisible(true);
+                    button19.setVisible(true);
+
+                    button10.setVisible(false);
                     
                     int rand1 = futbolcuOzellik(label1);
                     if(rand1 == 0){
@@ -196,6 +205,7 @@ public class form2 extends Main {
 
                         else {
                             winLabel.setText("BERABERE!");
+                            button2.setVisible(true);
                         }
 
 
@@ -216,6 +226,7 @@ public class form2 extends Main {
                         }
                         else  {
                             winLabel.setText("BERABERE!");
+                            button2.setVisible(true);
                         }
 
                     }
@@ -235,17 +246,12 @@ public class form2 extends Main {
                         }
                         else  {
                             winLabel.setText("BERABERE!");
+                            button2.setVisible(true);
                         }
 
 
                     }
 
-                    button2.setVisible(false);
-                    panel_a.setVisible(true);
-                    button18.setVisible(true);
-                    button19.setVisible(true);
-
-                    button10.setVisible(false);
 
 
                     Image img1 = new ImageIcon(this.getClass().getResource(String.valueOf(sorted_photos.get(0)))).getImage();
@@ -267,8 +273,10 @@ public class form2 extends Main {
                     oyuncuSkorLabel.setText("Oyuncu Skor: "+ kullanici.getSkor());
 
                     if(raund[0]==8){
-                        butonBitir.setVisible(true);
+                        button2.setVisible(true);
                     }
+
+
 
                 }
 
@@ -296,6 +304,12 @@ public class form2 extends Main {
 
                 if (raund[0]%2==1) {
                     int rand2 = basketbolcuOzellik(label1);
+                    button3.setVisible(false);
+                    panel_b.setVisible(true);
+                    button18.setVisible(true);
+                    button19.setVisible(true);
+
+                    button11.setVisible(false);
                    
                     if(rand2 == 0){
                         if(userCardList.get(1).getOzellik1() > pcCardList.get(1).getOzellik1()){
@@ -314,6 +328,7 @@ public class form2 extends Main {
                         }
                         else {
                             winLabel.setText("BERABERE!");
+                            button3.setVisible(true);
                         }
 
                     }
@@ -332,6 +347,7 @@ public class form2 extends Main {
                         }
                         else {
                             winLabel.setText("BERABERE!");
+                            button3.setVisible(true);
                         }
 
                     }
@@ -350,15 +366,11 @@ public class form2 extends Main {
                         }
                         else {
                             winLabel.setText("BERABERE!");
+                            button3.setVisible(true);
                         }
 
                     }
-                    button3.setVisible(false);
-                    panel_b.setVisible(true);
-                    button18.setVisible(true);
-                    button19.setVisible(true);
 
-                    button11.setVisible(false);
 
                     Image img3 = new ImageIcon(this.getClass().getResource(String.valueOf(basketbol_sorted_photos.get(0)))).getImage();
                     button18.setIcon(new ImageIcon(img3));
@@ -390,6 +402,12 @@ public class form2 extends Main {
 
 
                 if (raund[0]%2==0) {
+                    button4.setVisible(false);
+                    panel_b.setVisible(true);
+                    button18.setVisible(true);
+                    button19.setVisible(true);
+
+                    button12.setVisible(false);
                     int rand3 = futbolcuOzellik(label1);
                   
                     if(rand3 == 0){
@@ -408,6 +426,7 @@ public class form2 extends Main {
                         }
                         else {
                             winLabel.setText("BERABERE!");
+                            button4.setVisible(true);
                         }
 
 
@@ -428,6 +447,7 @@ public class form2 extends Main {
                         }
                         else {
                             winLabel.setText("BERABERE!");
+                            button4.setVisible(true);
                         }
 
                     }
@@ -447,17 +467,12 @@ public class form2 extends Main {
                         }
                         else {
                             winLabel.setText("BERABERE!");
+                            button4.setVisible(true);
                         }
 
 
                     }
 
-                    button4.setVisible(false);
-                    panel_b.setVisible(true);
-                    button18.setVisible(true);
-                    button19.setVisible(true);
-
-                    button12.setVisible(false);
 
                     Image img5 = new ImageIcon(this.getClass().getResource(String.valueOf(sorted_photos.get(1)))).getImage();
                     button18.setIcon(new ImageIcon(img5));
@@ -488,6 +503,13 @@ public class form2 extends Main {
 
                 if(raund[0]%2==1) {
                     int rand4 = basketbolcuOzellik(label1);
+
+                    button5.setVisible(false);
+                    panel_b.setVisible(true);
+                    button18.setVisible(true);
+                    button19.setVisible(true);
+
+                    button13.setVisible(false);
                     
                     if(rand4 == 0){
                         if(userCardList.get(3).getOzellik1() > pcCardList.get(3).getOzellik1()){
@@ -506,6 +528,7 @@ public class form2 extends Main {
                         }
                         else  {
                             winLabel.setText("BERABERE!");
+                            button5.setVisible(true);
                         }
 
                     }
@@ -524,6 +547,7 @@ public class form2 extends Main {
                         }
                         else {
                             winLabel.setText("BERABERE!");
+                            button5.setVisible(true);
                         }
 
                     }
@@ -542,16 +566,11 @@ public class form2 extends Main {
                         }
                         else {
                             winLabel.setText("BERABERE!");
+                            button5.setVisible(true);
                         }
 
                     }
 
-                    button5.setVisible(false);
-                    panel_b.setVisible(true);
-                    button18.setVisible(true);
-                    button19.setVisible(true);
-
-                    button13.setVisible(false);
                     Image img7 = new ImageIcon(this.getClass().getResource(String.valueOf(basketbol_sorted_photos.get(1)))).getImage();
                     button18.setIcon(new ImageIcon(img7));
                     raund[0]++;
@@ -581,6 +600,12 @@ public class form2 extends Main {
 
                 if (raund[0]%2==0) {
                     int rand4 = futbolcuOzellik(label1);
+                    button6.setVisible(false);
+                    panel_b.setVisible(true);
+                    button18.setVisible(true);
+                    button19.setVisible(true);
+
+                    button14.setVisible(false);
                     if(rand4 == 0){
 
                         if(userCardList.get(4).getOzellik1() > pcCardList.get(4).getOzellik1()){
@@ -597,6 +622,7 @@ public class form2 extends Main {
                         }
                         else {
                             winLabel.setText("BERABERE!");
+                            button6.setVisible(true);
                         }
 
 
@@ -617,6 +643,7 @@ public class form2 extends Main {
                         }
                         else {
                             winLabel.setText("BERABERE!");
+                            button6.setVisible(true);
                         }
 
                     }
@@ -636,15 +663,11 @@ public class form2 extends Main {
                         }
                         else{
                             winLabel.setText("BERABERE!");
+                            button6.setVisible(true);
                         }
 
                     }
-                    button6.setVisible(false);
-                    panel_b.setVisible(true);
-                    button18.setVisible(true);
-                    button19.setVisible(true);
 
-                    button14.setVisible(false);
 
                     Image img9 = new ImageIcon(this.getClass().getResource(String.valueOf(sorted_photos.get(2)))).getImage();
 
@@ -679,6 +702,12 @@ public class form2 extends Main {
 
                 if (raund[0]%2==1) {
                     int rand4 = basketbolcuOzellik(label1);
+                    button7.setVisible(false);
+                    panel_b.setVisible(true);
+                    button18.setVisible(true);
+                    button19.setVisible(true);
+
+                    button15.setVisible(false);
                     if(rand4 == 0){
                         if(userCardList.get(5).getOzellik1() > pcCardList.get(5).getOzellik1()){
 
@@ -697,6 +726,7 @@ public class form2 extends Main {
                         }
                         else {
                             winLabel.setText("BERABERE!");
+                            button7.setVisible(true);
                         }
 
                     }
@@ -715,6 +745,7 @@ public class form2 extends Main {
                         }
                         else{
                             winLabel.setText("BERABERE!");
+                            button7.setVisible(true);
                         }
 
                     }
@@ -733,16 +764,11 @@ public class form2 extends Main {
                         }
                         else {
                             winLabel.setText("BERABERE!");
+                            button7.setVisible(true);
                         }
 
                     }
 
-                    button7.setVisible(false);
-                    panel_b.setVisible(true);
-                    button18.setVisible(true);
-                    button19.setVisible(true);
-
-                    button15.setVisible(false);
                     Image img11 = new ImageIcon(this.getClass().getResource(String.valueOf(basketbol_sorted_photos.get(2)))).getImage();
                     button18.setIcon(new ImageIcon(img11));
                     raund[0]++;
@@ -775,6 +801,13 @@ public class form2 extends Main {
 
                 if (raund[0]%2==0) {
                     int rand5 = futbolcuOzellik(label1);
+
+                    button8.setVisible(false);
+                    panel_b.setVisible(true);
+                    button18.setVisible(true);
+                    button19.setVisible(true);
+
+                    button16.setVisible(false);
                     if(rand5 == 0){
 
                         if(userCardList.get(6).getOzellik1() > pcCardList.get(6).getOzellik1()){
@@ -792,6 +825,7 @@ public class form2 extends Main {
                         }
                         else {
                             winLabel.setText("BERABERE!");
+                            button8.setVisible(true);
                         }
 
 
@@ -812,6 +846,7 @@ public class form2 extends Main {
                         }
                         else{
                             winLabel.setText("BERABERE!");
+                            button8.setVisible(true);
                         }
 
                     }
@@ -831,18 +866,12 @@ public class form2 extends Main {
                         }
                         else {
                             winLabel.setText("BERABERE!");
+                            button8.setVisible(true);
                         }
 
 
                     }
 
-
-                    button8.setVisible(false);
-                    panel_b.setVisible(true);
-                    button18.setVisible(true);
-                    button19.setVisible(true);
-
-                    button16.setVisible(false);
 
                     Image img13 = new ImageIcon(this.getClass().getResource(String.valueOf(sorted_photos.get(3)))).getImage();
                     button18.setIcon(new ImageIcon(img13));
@@ -874,6 +903,13 @@ public class form2 extends Main {
 
                 if (raund[0]%2==1) {
                     int rand4 = basketbolcuOzellik(label1);
+                    button9.setVisible(false);
+                    panel_b.setVisible(true);
+                    button18.setVisible(true);
+                    button19.setVisible(true);
+
+                    button17.setVisible(false);
+
                     if(rand4 == 0){
                         if(userCardList.get(7).getOzellik1() > pcCardList.get(7).getOzellik1()){
 
@@ -891,6 +927,7 @@ public class form2 extends Main {
                         }
                         else {
                             winLabel.setText("BERABERE!");
+                            button9.setVisible(true);
                         }
 
                     }
@@ -909,6 +946,7 @@ public class form2 extends Main {
                         }
                         else {
                             winLabel.setText("BERABERE!");
+                            button9.setVisible(true);
                         }
 
                     }
@@ -927,17 +965,12 @@ public class form2 extends Main {
                         }
                         else {
                             winLabel.setText("BERABERE!");
+                            button9.setVisible(true);
                         }
 
                     }
 
 
-                    button9.setVisible(false);
-                    panel_b.setVisible(true);
-                    button18.setVisible(true);
-                    button19.setVisible(true);
-
-                    button17.setVisible(false);
                     Image img15 = new ImageIcon(this.getClass().getResource(String.valueOf(basketbol_sorted_photos.get(3)))).getImage();
                     button18.setIcon(new ImageIcon(img15));
                     raund[0]++;
@@ -970,6 +1003,9 @@ public class form2 extends Main {
                 else if(kullanici.getSkor()>bilgisayar.getSkor()){
                     kazananLabel.setText("KAZANAN OYUNCU!");
                 }
+                else{
+                    kazananLabel.setText("BERABERE!");
+                }
                 kazananLabel.setVisible(true);
                 label1.setText("GAME OVER");
                 button18.setVisible(false);
@@ -978,6 +1014,32 @@ public class form2 extends Main {
                 butonBitir.setVisible(false);
                 oyuncuSkorLabel.setVisible(false);
                 bilgisayarSkorLabel.setVisible(false);
+                oyunuKapatButton.setVisible(true);
+
+                button1.setVisible(false);
+                button2.setVisible(false);
+
+                button3.setVisible(false);
+                button4.setVisible(false);
+                button5.setVisible(false);
+                button6.setVisible(false);
+                button7.setVisible(false);
+                button8.setVisible(false);
+                button9.setVisible(false);
+                button10.setVisible(false);
+                button11.setVisible(false);
+                button12.setVisible(false);
+                button13.setVisible(false);
+                button14.setVisible(false);
+                button15.setVisible(false);
+                button16.setVisible(false);
+                button17.setVisible(false);
+            }
+        });
+        oyunuKapatButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(1);
             }
         });
     }

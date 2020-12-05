@@ -62,6 +62,7 @@ public class Basketbolcu extends Sporcu {
         this.serbestAtis = ozellik3;
     }
 
+
     @Override
     public int[] sporcuPuaniGoster() {
         super.sporcuPuaniGoster();
