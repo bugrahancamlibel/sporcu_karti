@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Random;
+
 public class Bilgisayar extends Oyuncu {
 
 
@@ -8,8 +10,9 @@ public class Bilgisayar extends Oyuncu {
 
 
      }
-     public void kartSec(){
-
-         super.kartSec();
+     public int kartSec(int cardNumber){
+         Random random = new Random();
+         cardNumber = random.nextInt(8);
+         return cardNumber;
      }
 }

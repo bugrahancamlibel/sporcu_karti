@@ -111,6 +111,7 @@ public class Main extends JFrame{
         Futbolcu futbolcu7 = new Futbolcu("LEWANDOWSKI", "BAYERN MUNCHEN", 95, 80, 98);
         Futbolcu futbolcu8 = new Futbolcu("MBAPPE", "PSG", 95, 85, 97);
 
+
         futbolcuList.add(futbolcu1);
         futbolcuList.add(futbolcu2);
         futbolcuList.add(futbolcu3);
@@ -208,11 +209,8 @@ public class Main extends JFrame{
         System.out.println("basketcilerin sorted photos: "+basketbol_sorted_photos);
 
         System.out.println("futbolcu list kopya: "+futbolcuList_kopya);
+        //kullanici.kartSec();
 
-
-
-                /*Image img18 = new ImageIcon(this.getClass().getResource(sorted_photos.get(3))).getImage();
-                f.button18.setIcon(new ImageIcon(img18));*/
 
 
         SwingUtilities.invokeLater(new Runnable() {

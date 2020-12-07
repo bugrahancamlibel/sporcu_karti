@@ -4,8 +4,20 @@ public class Basketbolcu extends Sporcu {
     //sporcu sınıfından kalıtım alacak.
     private String basketbolcuAdi;
     private String basketbolcuTakim;
-
+    private boolean kartKullanildiMi;
     private int ikilik;
+
+    public boolean isKartKullanildiMi() {
+        return kartKullanildiMi;
+    }
+
+    public void setKartKullanildiMi(boolean kartKullanildiMi) {
+        this.kartKullanildiMi = kartKullanildiMi;
+    }
+    public boolean getKartKullanildiMi(){
+        return kartKullanildiMi;
+    }
+
     private int ucluk;
     private int serbestAtis;
 

@@ -47,11 +47,7 @@ public class form2 extends Main {
     private JButton oyunuKapatButton;
     private int a = 0;
 
-
     public form2(ArrayList sorted_photos, ArrayList basketbol_sorted_photos, ArrayList<Sporcu> userCardList, ArrayList<Sporcu> pcCardList, Kullanici kullanici, Bilgisayar bilgisayar) {
-
-
-
 
         add(panel1);
         setSize(1900,1060);
@@ -115,10 +111,6 @@ public class form2 extends Main {
         label1.setPreferredSize(new Dimension(100,100));
 
 
-
-
-
-
         
 
         button1.addActionListener(new ActionListener() {
@@ -180,6 +172,7 @@ public class form2 extends Main {
 
                 //bugranin ifinin altinda cagatayin ifleri
                 if(raund[0]%2==0) {
+                    kullanici.kartSec(2);
                     button2.setVisible(false);
                     panel_a.setVisible(true);
                     button18.setVisible(true);
@@ -194,18 +187,17 @@ public class form2 extends Main {
                             kullanici_puan[0] += 10;
                             kullanici.setSkor(kullanici_puan[0]);
                             winLabel.setText("Oyuncu Kazandı!");
-
                         }
                         else if(userCardList.get(0).getOzellik1() < pcCardList.get(0).getOzellik1()){
                             bilgisayar_puan[0] +=10;
                             bilgisayar.setSkor(bilgisayar_puan[0]);
                             winLabel.setText("Bilgisayar Kazandı!");
-
                         }
 
                         else {
                             winLabel.setText("BERABERE!");
                             button2.setVisible(true);
+                            button10.setVisible(true);
                         }
 
 
@@ -227,6 +219,7 @@ public class form2 extends Main {
                         else  {
                             winLabel.setText("BERABERE!");
                             button2.setVisible(true);
+                            button10.setVisible(true);
                         }
 
                     }
@@ -247,6 +240,7 @@ public class form2 extends Main {
                         else  {
                             winLabel.setText("BERABERE!");
                             button2.setVisible(true);
+                            button10.setVisible(true);
                         }
 
 
@@ -329,6 +323,7 @@ public class form2 extends Main {
                         else {
                             winLabel.setText("BERABERE!");
                             button3.setVisible(true);
+                            button11.setVisible(true);
                         }
 
                     }
@@ -348,6 +343,7 @@ public class form2 extends Main {
                         else {
                             winLabel.setText("BERABERE!");
                             button3.setVisible(true);
+                            button11.setVisible(true);
                         }
 
                     }
@@ -367,6 +363,7 @@ public class form2 extends Main {
                         else {
                             winLabel.setText("BERABERE!");
                             button3.setVisible(true);
+                            button11.setVisible(true);
                         }
 
                     }
@@ -427,6 +424,7 @@ public class form2 extends Main {
                         else {
                             winLabel.setText("BERABERE!");
                             button4.setVisible(true);
+                            button12.setVisible(true);
                         }
 
 
@@ -448,6 +446,7 @@ public class form2 extends Main {
                         else {
                             winLabel.setText("BERABERE!");
                             button4.setVisible(true);
+                            button12.setVisible(true);
                         }
 
                     }
@@ -468,6 +467,7 @@ public class form2 extends Main {
                         else {
                             winLabel.setText("BERABERE!");
                             button4.setVisible(true);
+                            button12.setVisible(true);
                         }
 
 
@@ -499,8 +499,6 @@ public class form2 extends Main {
         button5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-
                 if(raund[0]%2==1) {
                     int rand4 = basketbolcuOzellik(label1);
 
@@ -529,6 +527,7 @@ public class form2 extends Main {
                         else  {
                             winLabel.setText("BERABERE!");
                             button5.setVisible(true);
+                            button13.setVisible(true);
                         }
 
                     }
@@ -548,6 +547,7 @@ public class form2 extends Main {
                         else {
                             winLabel.setText("BERABERE!");
                             button5.setVisible(true);
+                            button13.setVisible(true);
                         }
 
                     }
@@ -567,6 +567,7 @@ public class form2 extends Main {
                         else {
                             winLabel.setText("BERABERE!");
                             button5.setVisible(true);
+                            button13.setVisible(true);
                         }
 
                     }
@@ -623,6 +624,7 @@ public class form2 extends Main {
                         else {
                             winLabel.setText("BERABERE!");
                             button6.setVisible(true);
+                            button14.setVisible(true);
                         }
 
 
@@ -644,6 +646,7 @@ public class form2 extends Main {
                         else {
                             winLabel.setText("BERABERE!");
                             button6.setVisible(true);
+                            button14.setVisible(true);
                         }
 
                     }
@@ -664,6 +667,7 @@ public class form2 extends Main {
                         else{
                             winLabel.setText("BERABERE!");
                             button6.setVisible(true);
+                            button14.setVisible(true);
                         }
 
                     }
@@ -727,6 +731,7 @@ public class form2 extends Main {
                         else {
                             winLabel.setText("BERABERE!");
                             button7.setVisible(true);
+                            button15.setVisible(true);
                         }
 
                     }
@@ -745,6 +750,7 @@ public class form2 extends Main {
                         }
                         else{
                             winLabel.setText("BERABERE!");
+                            button15.setVisible(true);
                             button7.setVisible(true);
                         }
 
@@ -764,6 +770,7 @@ public class form2 extends Main {
                         }
                         else {
                             winLabel.setText("BERABERE!");
+                            button15.setVisible(true);
                             button7.setVisible(true);
                         }
 
@@ -802,6 +809,7 @@ public class form2 extends Main {
                 if (raund[0]%2==0) {
                     int rand5 = futbolcuOzellik(label1);
 
+
                     button8.setVisible(false);
                     panel_b.setVisible(true);
                     button18.setVisible(true);
@@ -826,6 +834,7 @@ public class form2 extends Main {
                         else {
                             winLabel.setText("BERABERE!");
                             button8.setVisible(true);
+                            button16.setVisible(true);
                         }
 
 
@@ -847,6 +856,7 @@ public class form2 extends Main {
                         else{
                             winLabel.setText("BERABERE!");
                             button8.setVisible(true);
+                            button16.setVisible(true);
                         }
 
                     }
@@ -867,6 +877,7 @@ public class form2 extends Main {
                         else {
                             winLabel.setText("BERABERE!");
                             button8.setVisible(true);
+                            button16.setVisible(true);
                         }
 
 
@@ -928,6 +939,7 @@ public class form2 extends Main {
                         else {
                             winLabel.setText("BERABERE!");
                             button9.setVisible(true);
+                            button17.setVisible(true);
                         }
 
                     }
@@ -947,6 +959,7 @@ public class form2 extends Main {
                         else {
                             winLabel.setText("BERABERE!");
                             button9.setVisible(true);
+                            button16.setVisible(true);
                         }
 
                     }
@@ -966,6 +979,7 @@ public class form2 extends Main {
                         else {
                             winLabel.setText("BERABERE!");
                             button9.setVisible(true);
+                            button16.setVisible(true);
                         }
 
                     }
@@ -998,10 +1012,10 @@ public class form2 extends Main {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("bilg puan: "+bilgisayar.getSkor()+"\nkullanici puan: "+kullanici.getSkor());
                 if(bilgisayar.getSkor()>kullanici.getSkor()){
-                    kazananLabel.setText("KAZANAN BİLGİSAYAR!");
+                    kazananLabel.setText("KAZANAN: BİLGİSAYAR!");
                 }
                 else if(kullanici.getSkor()>bilgisayar.getSkor()){
-                    kazananLabel.setText("KAZANAN OYUNCU!");
+                    kazananLabel.setText("KAZANAN: "+kullanici.getOyuncuAdi());
                 }
                 else{
                     kazananLabel.setText("BERABERE!");

@@ -1,6 +1,6 @@
 package com.company;
 
-public class Oyuncu {
+public abstract class Oyuncu {
 
     private String oyuncuID;
     private String oyuncuAdi;
@@ -37,11 +37,6 @@ public class Oyuncu {
         this.skor = skor;
     }
 
-    public  void kartSec(){
-        //Add aSystem.out.println("Swingle birlikte bağlantı kuracağımız, oyun oynarken kartı seçtiren fonk.");
-
-
-    }
 
     public static int SkorGoster(){
         int skor = 0;
@@ -49,4 +44,6 @@ public class Oyuncu {
         return skor;
 
     }
+
+    public abstract int kartSec(int cardNumber);
 }

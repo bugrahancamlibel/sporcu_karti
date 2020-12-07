@@ -8,6 +8,19 @@ public class Futbolcu extends Sporcu {
     private String futbolcuAdi;
     private String futbolcuTakim;
 
+    private boolean kartKullanildiMi = false;
+
+    public boolean isKartKullanildiMi() {
+        return kartKullanildiMi;
+    }
+
+    public void setKartKullanildiMi(boolean kartKullanildiMi) {
+        this.kartKullanildiMi = kartKullanildiMi;
+    }
+
+    public boolean getKartKullanildiMi(){
+        return kartKullanildiMi;
+    }
 
     private int penalti ;
     private int serbestAtis;
@@ -92,23 +105,7 @@ public class Futbolcu extends Sporcu {
 
         return new int [] {penalti,serbestAtis,kaleciKarsiKarsiya};
     }
-    /*public String toString(){
 
-        return "isim : " +futbolcuAdi+" takim : "+futbolcuTakim +" penalti : "+penalti +" serbest atis : " +serbestAtis+" kaleci karsi karsiya : " +kaleciKarsiKarsiya;
-    }*/
-
-
-
-
-    public static boolean kartKullanildiMi(){
-
-        boolean kullanildi_mi= false;
-
-
-
-
-        return kullanildi_mi;
-    }
 }
 
 

@@ -7,7 +7,8 @@ public class Kullanici extends Oyuncu {
 
 
     }
-    public void kartSec(){
-        super.kartSec();
+    @Override
+    public int kartSec(int cardNumber){
+        return cardNumber;
     }
 }
