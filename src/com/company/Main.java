@@ -142,13 +142,6 @@ public class Main extends JFrame{
         basketbolcuList.add(damianlillard);
         basketbolcuList.add(stephencurry);
 
-        //System.out.println(futbolcuList.get(1).getSporcuIsim());
-
-        // Objeleri arrayList e atama başarılı. bunu sout la görmüs olduk
-        /*for (Futbolcu a_futbolcu: futbolcuList) {
-
-            System.out.println(a_futbolcu.toString());
-        }*/
 
 
         Scanner scanner = new Scanner(System.in);
@@ -172,7 +165,7 @@ public class Main extends JFrame{
             userCardList.add(basketbolcuList.get(r));
             basketbol_sorted_photos.add(photos_basketbol.get(r));
             photos_basketbol.remove(r);
-            System.out.println("r:" + r);
+            //System.out.println("r:" + r);
             basketbolcuList.remove(r);
             n--;
 
@@ -190,7 +183,7 @@ public class Main extends JFrame{
             pcCardList.add(basketbolcuList.get(r));
             basketbol_sorted_photos.add(photos_basketbol.get(r));
             photos_basketbol.remove(r);
-            System.out.println("r:" + r);
+            //System.out.println("r:" + r);
             basketbolcuList.remove(r);
             n--;
         }
@@ -205,10 +198,10 @@ public class Main extends JFrame{
         for (int i = 0; i < 8; i++) {
             System.out.println("pc listten: " + pcCardList.get(i).getSporcuIsim());
         }
-        System.out.println("sortedphotos: "+sorted_photos);
-        System.out.println("basketcilerin sorted photos: "+basketbol_sorted_photos);
+        System.out.println("-Sortedphotos: "+sorted_photos);
+        System.out.println("-Basketcilerin sorted photos: "+basketbol_sorted_photos);
 
-        System.out.println("futbolcu list kopya: "+futbolcuList_kopya);
+        //System.out.println("futbolcu list kopya: "+futbolcuList_kopya);
         //kullanici.kartSec();
 
 
@@ -244,14 +237,6 @@ public class Main extends JFrame{
                 Image img8 = new ImageIcon(this.getClass().getResource(basketbol_sorted_photos.get(3))).getImage();
                 f.button9.setIcon(new ImageIcon(img8));
 
-                /*Image img2 = new ImageIcon(this.getClass().getResource("harden.png")).getImage();
-                f.button3.setIcon(new ImageIcon(img2));
-
-                Image img4 = new ImageIcon(this.getClass().getResource("lebron.png")).getImage();
-                f.button5 .setIcon(new ImageIcon(img4));*/
-
-
-
 
                 //bilgisayar kartlarının arka yüzünü ekler
 
@@ -273,15 +258,9 @@ public class Main extends JFrame{
                 f.button17.setIcon(new ImageIcon(img_background7));
 
 
-
-
             }
 
         });
-
-
-
-
 
 
 
